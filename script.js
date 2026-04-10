@@ -4,6 +4,8 @@ const toggle = document.querySelector('.menu-toggle');
 const newsletter = document.querySelector('.newsletter');
 const splitCards = document.querySelectorAll('.feature-grid .card');
 const reviews = document.querySelectorAll('.review-rotator .review-card');
+const offerMosaic = document.querySelector('.offer-mosaic');
+const offerCards = offerMosaic ? Array.from(offerMosaic.querySelectorAll('[data-offer-card]')) : [];
 
 if (toggle && navWrap) {
   toggle.addEventListener('click', () => {
@@ -43,6 +45,53 @@ if (reviews.length > 1) {
     reviewIndex = (reviewIndex + 1) % reviews.length;
     reviews[reviewIndex].classList.add('active');
   }, 3600);
+}
+
+if (offerMosaic && offerCards.length) {
+  const setActiveCard = (nextCard) => {
+    const isSame = nextCard?.classList.contains('is-active');
+    offerMosaic.classList.toggle('focus-mode', Boolean(nextCard) && !isSame);
+
+    offerCards.forEach((card, index) => {
+      const reveal = card.querySelector('.offer-reveal');
+      const trigger = card.querySelector('.offer-trigger');
+      const isActive = Boolean(nextCard) && !isSame && card === nextCard;
+
+      card.classList.toggle('is-active', isActive);
+      card.classList.remove('shift-left', 'shift-right');
+
+      if (trigger) trigger.setAttribute('aria-expanded', String(isActive));
+      if (reveal) reveal.setAttribute('aria-hidden', String(!isActive));
+
+      if (!nextCard || isSame || isActive) return;
+
+      const activeIndex = offerCards.indexOf(nextCard);
+      card.classList.add(index < activeIndex ? 'shift-left' : 'shift-right');
+    });
+  };
+
+  offerCards.forEach((card) => {
+    const trigger = card.querySelector('.offer-trigger');
+
+    card.addEventListener('click', () => {
+      setActiveCard(card);
+    });
+
+    trigger?.addEventListener('click', (event) => {
+      event.stopPropagation();
+      setActiveCard(card);
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!offerMosaic.contains(event.target)) {
+      setActiveCard(null);
+    }
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setActiveCard(null);
+  });
 }
 
 window.addEventListener(

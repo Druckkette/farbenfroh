@@ -571,6 +571,91 @@ em {
   overflow: hidden;
 }
 
+
+.offer-card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 380ms ease, filter 380ms ease;
+}
+
+.offer-card h3,
+.offer-card p {
+  position: relative;
+  z-index: 2;
+}
+
+.offer-trigger {
+  position: relative;
+  z-index: 2;
+  margin-top: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.18);
+  color: inherit;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.5rem 0.95rem;
+  cursor: pointer;
+}
+
+.offer-reveal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(58%, 360px);
+  height: 100%;
+  transform: translateX(108%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 460ms cubic-bezier(0.2, 0.9, 0.2, 1), opacity 340ms ease;
+  padding: 1.35rem 1.25rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: linear-gradient(140deg, rgba(45, 34, 50, 0.76), rgba(89, 58, 96, 0.62));
+  color: #fff;
+}
+
+.offer-reveal h4 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+}
+
+.offer-reveal ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.offer-mosaic.focus-mode .offer-card:not(.is-active) {
+  opacity: 0.22;
+  filter: blur(1px) saturate(0.85);
+}
+
+.offer-mosaic.focus-mode .offer-card.shift-left {
+  transform: translateX(-56px) scale(0.97);
+}
+
+.offer-mosaic.focus-mode .offer-card.shift-right {
+  transform: translateX(56px) scale(0.97);
+}
+
+.offer-mosaic .offer-card.is-active {
+  transform: scale(1.02);
+  box-shadow: 0 28px 50px rgba(29, 20, 36, 0.28);
+  z-index: 8;
+}
+
+.offer-mosaic .offer-card.is-active .offer-reveal {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.offer-mosaic .offer-card.is-active .offer-trigger {
+  background: rgba(255, 255, 255, 0.28);
+}
+
 .mosaic-item.tall {
   grid-column: span 7;
   grid-row: span 2;
@@ -591,6 +676,11 @@ em {
 .mosaic-item.tone-cream {
   grid-column: span 5;
   background: #f4eee6;
+}
+
+.tone-cream .offer-trigger {
+  border-color: rgba(62, 42, 67, 0.24);
+  background: rgba(255, 255, 255, 0.64);
 }
 
 .mosaic-item.image-card {
@@ -841,6 +931,26 @@ em {
   .mosaic-item.tone-cream {
     grid-column: span 12;
     min-height: 260px;
+  }
+
+  .offer-reveal {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    top: auto;
+    bottom: 0;
+    height: auto;
+    min-height: 50%;
+    transform: translateY(104%);
+  }
+
+  .offer-mosaic.focus-mode .offer-card.shift-left,
+  .offer-mosaic.focus-mode .offer-card.shift-right {
+    transform: translateY(18px) scale(0.98);
+  }
+
+  .offer-mosaic .offer-card.is-active .offer-reveal {
+    transform: translateY(0);
   }
 
   .promise-grid {
