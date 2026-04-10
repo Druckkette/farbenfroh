@@ -655,6 +655,33 @@ em {
 .offer-mosaic .offer-card.is-active .offer-trigger {
   background: rgba(255, 255, 255, 0.28);
 }
+.offer-mosaic.is-premium-open .mosaic-item:not(.offer-card-premium) {
+  opacity: 0;
+  transform: translateX(72px);
+  pointer-events: none;
+  transition: transform 380ms ease, opacity 320ms ease;
+}
+
+.offer-card-premium {
+  transition: grid-column 460ms cubic-bezier(0.2, 0.9, 0.2, 1), transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 320ms ease;
+}
+
+.offer-card-premium.is-open {
+  grid-column: span 12;
+  transform: scale(1.01);
+  box-shadow: 0 30px 54px rgba(28, 20, 36, 0.32);
+}
+
+.offer-card-premium.is-open .offer-reveal {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.offer-card-premium .offer-trigger {
+  min-width: 146px;
+}
+
 
 .mosaic-item.tall {
   grid-column: span 7;
@@ -949,8 +976,14 @@ em {
     transform: translateY(18px) scale(0.98);
   }
 
-  .offer-mosaic .offer-card.is-active .offer-reveal {
+  .offer-mosaic .offer-card.is-active .offer-reveal,
+  .offer-card-premium.is-open .offer-reveal {
     transform: translateY(0);
+  }
+
+  .offer-mosaic.is-premium-open .mosaic-item:not(.offer-card-premium) {
+    transform: translateY(20px);
+    opacity: 0.12;
   }
 
   .promise-grid {
