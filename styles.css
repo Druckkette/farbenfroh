@@ -87,6 +87,22 @@ a {
   font-size: 2rem;
   letter-spacing: 0.02em;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.logo-badge {
+  width: 1.55rem;
+  height: 1.55rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(140deg, rgba(225, 136, 127, 0.8), rgba(79, 54, 86, 0.8));
+  box-shadow: 0 6px 14px rgba(61, 40, 68, 0.2);
 }
 
 .nav {
@@ -353,6 +369,117 @@ em {
   background: var(--bg-cream);
 }
 
+.about-me {
+  background: linear-gradient(180deg, #fff8f4, #fffefd);
+}
+
+.about-me-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-photo-card,
+.about-copy {
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1.6rem;
+}
+
+.photo-placeholder {
+  border-radius: calc(var(--radius) - 6px);
+  min-height: 380px;
+  display: grid;
+  place-items: center;
+  color: #7c647e;
+  font-size: 1.3rem;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.03em;
+  background:
+    linear-gradient(145deg, rgba(240, 203, 194, 0.38), rgba(222, 231, 243, 0.42)),
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.45) 0 10px, rgba(237, 223, 231, 0.45) 10px 20px);
+  border: 1px dashed rgba(112, 89, 120, 0.3);
+}
+
+.photo-hint {
+  margin: 0.85rem 0 0;
+  color: #7c6d80;
+  font-size: 0.9rem;
+}
+
+.about-actions {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.about-actions .btn-soft {
+  background: rgba(243, 230, 240, 0.8);
+  border-color: rgba(80, 54, 88, 0.2);
+}
+
+.testimonials {
+  background: radial-gradient(circle at top right, rgba(229, 197, 194, 0.45), transparent 45%), #f9f7ff;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(91, 67, 100, 0.12);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 10px 24px rgba(51, 36, 57, 0.09);
+}
+
+.stars {
+  margin: 0 0 0.65rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.18em;
+  color: #d79462;
+}
+
+.review-card h3 {
+  margin: 1rem 0 0;
+  font-size: 1.05rem;
+}
+
+.faq {
+  background: #fff;
+}
+
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq details {
+  background: linear-gradient(130deg, rgba(247, 241, 237, 0.95), rgba(250, 248, 255, 0.95));
+  border-radius: 16px;
+  border: 1px solid rgba(91, 70, 98, 0.14);
+  padding: 0.9rem 1rem;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #3d2e42;
+}
+
+.faq details p {
+  margin: 0.7rem 0 0.1rem;
+  color: #655769;
+}
+
 .mosaic {
   display: grid;
   gap: 1.25rem;
@@ -503,8 +630,11 @@ em {
   margin: 1rem auto 1.7rem;
 }
 
-.blog {
-  padding-bottom: 4rem;
+.cta-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .site-footer {
@@ -568,6 +698,28 @@ em {
   gap: 1rem;
 }
 
+.legal-links a {
+  position: relative;
+}
+
+.legal-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.legal-links a:hover::after,
+.legal-links a:focus-visible::after {
+  transform: scaleX(1);
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -582,6 +734,11 @@ em {
 @media (max-width: 1024px) {
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-me-grid,
+  .review-grid {
+    grid-template-columns: 1fr;
   }
 
   .pricing-grid {
