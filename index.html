@@ -147,22 +147,48 @@
             <p class="eyebrow">Unsere Angebote</p>
             <h2>Farbberatung, die mit deinem Alltag funktioniert.</h2>
           </header>
-          <div class="mosaic">
-            <article class="mosaic-item tall image-card">
+          <div class="mosaic offer-mosaic">
+            <article id="premium-session-card" class="mosaic-item tall image-card offer-card offer-card-premium">
               <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="Beratungssituation mit Farbmustern" loading="lazy" />
               <div class="mosaic-content">
                 <h3>1:1 Premium Session</h3>
                 <p>90 Minuten inklusive digitaler Farbpalette und individueller Stil-Roadmap.</p>
+                <button class="offer-trigger" type="button" aria-expanded="false" aria-controls="premium-session-reveal">Details ansehen</button>
+              </div>
+              <div id="premium-session-reveal" class="offer-reveal" aria-hidden="true">
+                <h4>Das ist enthalten</h4>
+                <ul>
+                  <li>Farbanalyse mit Live-Draping</li>
+                  <li>Persönliche Outfit-Formel für Alltag & Events</li>
+                  <li>Digitale Palette + Einkaufsliste</li>
+                </ul>
               </div>
             </article>
-            <article class="mosaic-item tone-dark">
+            <article class="mosaic-item tone-dark offer-card">
               <h3>Business Color Code</h3>
               <p>Für ein souveränes Auftreten in Meetings, Vorträgen und Networking-Situationen.</p>
-              <a href="#contact" class="link-arrow">Beratung anfragen →</a>
+              <button class="offer-trigger" type="button" aria-expanded="false">Details ansehen</button>
+              <div class="offer-reveal" aria-hidden="true">
+                <h4>Ideal für</h4>
+                <ul>
+                  <li>Leadership-Rollen und Präsentationen</li>
+                  <li>Wirkungsstarke, seriöse Farbwelten</li>
+                  <li>Capsule-Looks für Business-Wochen</li>
+                </ul>
+              </div>
             </article>
-            <article class="mosaic-item tone-cream">
+            <article class="mosaic-item tone-cream offer-card">
               <h3>Closet Refresh</h3>
               <p>Wir sortieren deine Garderobe nach Farbharmonie und erstellen 15 tragbare Kombinationen.</p>
+              <button class="offer-trigger" type="button" aria-expanded="false">Details ansehen</button>
+              <div class="offer-reveal" aria-hidden="true">
+                <h4>Ergebnis nach dem Termin</h4>
+                <ul>
+                  <li>Klarer Kleiderschrank ohne Fehlkäufe</li>
+                  <li>Farb-Cluster für schnelle Outfits</li>
+                  <li>Konkrete Kombi-Pläne für 30 Tage</li>
+                </ul>
+              </div>
             </article>
             <article class="mosaic-item image-card">
               <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=80" alt="Farbberatung mit Stoffen und Make-up" loading="lazy" />
@@ -222,22 +248,48 @@
             <p class="eyebrow">Kundenbewertungen</p>
             <h2>Ergebnisse, die man sieht – und fühlt.</h2>
           </header>
-          <div class="review-grid">
-            <article class="review-card">
-              <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
-              <p>„Mega Beratung! Ich weiß endlich, welche Farben mich frisch aussehen lassen.“</p>
-              <h3>Leonie R.</h3>
-            </article>
-            <article class="review-card">
-              <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
-              <p>„Super sympathisch und total alltagstauglich. Mein Kleiderschrank ist jetzt viel klarer.“</p>
-              <h3>Mara S.</h3>
-            </article>
-            <article class="review-card">
-              <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
-              <p>„Tolles Auge für Details. Die Tipps für Business-Outfits waren Gold wert.“</p>
-              <h3>Daniela K.</h3>
-            </article>
+          <div class="review-showcase">
+            <img
+              class="review-photo"
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1200&q=80"
+              alt="Kundin mit Tablet bei einer Farbberatung"
+              loading="lazy"
+            />
+            <div class="review-rotator" aria-live="polite">
+              <article class="review-card active">
+                <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
+                <p>Quick doctor access and great support — <em>perfect for busy parents!</em></p>
+                <div class="review-meta">
+                  <div class="avatar" aria-hidden="true">S</div>
+                  <div>
+                    <h3>Sarah Venny</h3>
+                    <p>First-time mother</p>
+                  </div>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
+                <p>„Mega Beratung! Ich weiß endlich, welche Farben mich frisch aussehen lassen.“</p>
+                <div class="review-meta">
+                  <div class="avatar" aria-hidden="true">L</div>
+                  <div>
+                    <h3>Leonie R.</h3>
+                    <p>Marketing Managerin</p>
+                  </div>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
+                <p>„Super sympathisch und total alltagstauglich. Mein Kleiderschrank ist jetzt viel klarer.“</p>
+                <div class="review-meta">
+                  <div class="avatar" aria-hidden="true">M</div>
+                  <div>
+                    <h3>Mara S.</h3>
+                    <p>Selbstständig</p>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
