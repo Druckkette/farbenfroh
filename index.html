@@ -20,7 +20,10 @@
   <body>
     <header class="site-header" id="top">
       <div class="container nav-wrap">
-        <a class="brand" href="#top" aria-label="Farbenfroh Startseite">Farbenfroh</a>
+        <a class="brand" href="#top" aria-label="Farbenfroh Startseite">
+          <span class="logo-badge" aria-hidden="true">F</span>
+          Farbenfroh
+        </a>
 
         <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
           <span></span><span></span><span></span>
@@ -28,11 +31,11 @@
         </button>
 
         <nav class="nav" id="main-nav" aria-label="Hauptnavigation">
-          <a href="#about">Über uns</a>
+          <a href="#about-me">Über mich</a>
           <a href="#features">Leistungen</a>
+          <a href="#reviews">Bewertungen</a>
           <a href="#services">Beratung</a>
-          <a href="#pricing">Pakete</a>
-          <a href="#blog">Blog</a>
+          <a href="#faq">FAQ</a>
         </nav>
 
         <div class="nav-actions">
@@ -76,6 +79,34 @@
               beim Event und im Alltag.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="section about-me" id="about-me">
+        <div class="container about-me-grid">
+          <article class="about-photo-card">
+            <div class="photo-placeholder" role="img" aria-label="Platzhalter für dein Porträtfoto">
+              <span>Dein Foto</span>
+            </div>
+            <p class="photo-hint">Hier kann später dein persönliches Porträt eingesetzt werden.</p>
+          </article>
+          <article class="about-copy">
+            <p class="eyebrow">Über Mich</p>
+            <h2>Hallo, ich bin die Gründerin von Farbenfroh.</h2>
+            <p>
+              Ich unterstütze dich dabei, Farben zu tragen, die deine Persönlichkeit sichtbar machen.
+              Mit Feingefühl, klarer Analyse und einem entspannten Beratungsstil gestalten wir gemeinsam
+              Looks, die sich nach dir anfühlen – statt nach Trends.
+            </p>
+            <p>
+              Ganz gleich, ob du deinen Kleiderschrank neu sortieren, für einen wichtigen Anlass auftreten
+              oder deinen Stil langfristig aufbauen möchtest: Ich begleite dich Schritt für Schritt.
+            </p>
+            <div class="about-actions">
+              <a class="btn btn-soft" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram besuchen</a>
+              <a class="btn btn-ghost" href="#contact">Beratung anfragen</a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -185,18 +216,71 @@
         </div>
       </section>
 
+      <section class="section testimonials" id="reviews">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Kundenbewertungen</p>
+            <h2>Ergebnisse, die man sieht – und fühlt.</h2>
+          </header>
+          <div class="review-grid">
+            <article class="review-card">
+              <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
+              <p>„Mega Beratung! Ich weiß endlich, welche Farben mich frisch aussehen lassen.“</p>
+              <h3>Leonie R.</h3>
+            </article>
+            <article class="review-card">
+              <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
+              <p>„Super sympathisch und total alltagstauglich. Mein Kleiderschrank ist jetzt viel klarer.“</p>
+              <h3>Mara S.</h3>
+            </article>
+            <article class="review-card">
+              <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
+              <p>„Tolles Auge für Details. Die Tipps für Business-Outfits waren Gold wert.“</p>
+              <h3>Daniela K.</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Häufig gestellte Fragen</p>
+            <h2>Alles Wichtige auf einen Blick.</h2>
+          </header>
+          <div class="faq-list">
+            <details>
+              <summary>Kann ich die Beratung bei mir zu Hause machen?</summary>
+              <p>Ja, nach Absprache sind Hausbesuche möglich. Alternativ biete ich auch Studio- und Online-Termine an.</p>
+            </details>
+            <details>
+              <summary>Wie lange dauert die Beratung?</summary>
+              <p>Je nach Paket zwischen 30 und 90 Minuten, bei Gruppen- oder Eventformaten auch länger.</p>
+            </details>
+            <details>
+              <summary>Kann ich mit mehreren Personen teilnehmen?</summary>
+              <p>Sehr gern. Es gibt spezielle Duo- und Gruppenangebote für Freundinnen, Teams und kleine Runden.</p>
+            </details>
+            <details>
+              <summary>Was muss ich für die Beratung vorbereiten?</summary>
+              <p>Am besten kommst du ungeschminkt oder dezent geschminkt und bringst 2–3 Lieblingsstücke aus deinem Kleiderschrank mit.</p>
+            </details>
+            <details>
+              <summary>Kann ich dich auch für Veranstaltungen und Feiern buchen?</summary>
+              <p>Ja, ich biete mobile Farbberatung für Events, Feiern und Firmenveranstaltungen an.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section class="final-cta" id="contact">
         <div class="container cta-wrap">
           <h2>Bereit für einen Look, der sich endlich nach <em>dir</em> anfühlt?</h2>
           <p>Buche dein unverbindliches Erstgespräch und starte in 20 Minuten mit mehr Stilklarheit.</p>
-          <a href="mailto:hello@farbenfroh.de" class="btn btn-primary">Erstgespräch sichern</a>
-        </div>
-      </section>
-
-      <section class="section blog" id="blog">
-        <div class="container section-head">
-          <p class="eyebrow">Blog</p>
-          <h2>Aktuelle Tipps aus der Farbwelt.</h2>
+          <div class="cta-actions">
+            <a href="mailto:hello@farbenfroh.de" class="btn btn-primary">Erstgespräch sichern</a>
+            <a href="#pricing" class="btn btn-soft">Gutschein kaufen</a>
+          </div>
         </div>
       </section>
     </main>
@@ -210,9 +294,11 @@
         <div>
           <h4>Navigation</h4>
           <ul>
-            <li><a href="#about">Über uns</a></li>
+            <li><a href="#about-me">Über mich</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Bewertungen</a></li>
             <li><a href="#pricing">Pakete</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         <div>
@@ -233,9 +319,10 @@
       </div>
       <div class="container footer-bottom">
         <small>© 2026 Farbenfroh. Alle Rechte vorbehalten.</small>
-        <div>
-          <a href="#">Datenschutz</a>
-          <a href="#">Impressum</a>
+        <div class="legal-links">
+          <a href="#" aria-label="Impressum öffnen">Impressum</a>
+          <a href="#" aria-label="Datenschutzerklärung öffnen">Datenschutzerklärung</a>
+          <a href="#" aria-label="AGB öffnen">AGB</a>
         </div>
       </div>
     </footer>
