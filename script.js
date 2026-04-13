@@ -1,6 +1,22 @@
 // =============================================
-// FARBENFROH v2 – script.js
+// FARBENFROH v4 – script.js
 // =============================================
+
+// ── Instant anchor scroll (kein smooth) ────
+// Überschreibt browser-default scroll-behavior für alle internen Links
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+  const id = link.getAttribute('href').slice(1);
+  if (!id) return;
+  const target = document.getElementById(id);
+  if (!target) return;
+  e.preventDefault();
+  target.scrollIntoView({ behavior: 'instant', block: 'start' });
+  // Mobilmenü schließen falls offen
+  nav?.classList.remove('open');
+  burger?.setAttribute('aria-expanded', 'false');
+});
 
 // ── Header scroll ─────────────────────────
 const header = document.querySelector('.header');
@@ -16,13 +32,6 @@ if (burger && nav) {
   burger.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
     burger.setAttribute('aria-expanded', String(open));
-  });
-
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      burger.setAttribute('aria-expanded', 'false');
-    });
   });
 
   // Close on outside click
@@ -46,6 +55,28 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── Flip Cards ─────────────────────────────
+document.querySelectorAll('.flip-card').forEach(card => {
+  card.addEventListener('click', (e) => {
+    // Klick auf Button (Jetzt buchen / Anfragen) – nicht flippen, Link folgen
+    if (e.target.closest('.btn')) return;
+    card.classList.toggle('is-flipped');
+  });
+
+  // Keyboard: Enter / Space zum Flippen
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('role', 'button');
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      card.classList.toggle('is-flipped');
+    }
+    if (e.key === 'Escape') {
+      card.classList.remove('is-flipped');
+    }
+  });
+});
 
 // ── Newsletter ─────────────────────────────
 document.querySelector('.newsletter-form')?.addEventListener('submit', e => {

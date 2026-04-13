@@ -23,7 +23,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; }
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -411,29 +411,6 @@ p { margin: 0; }
   display: block;
 }
 
-/* ── MARQUEE ─────────────────────────────── */
-.marquee-strip {
-  background: var(--plum);
-  color: rgba(255,255,255,0.7);
-  overflow: hidden;
-  padding: 1rem 0;
-  white-space: nowrap;
-}
-
-.marquee-track {
-  display: inline-flex;
-  gap: 2rem;
-  animation: marquee 28s linear infinite;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.marquee-track span:nth-child(even) {
-  color: var(--accent);
-}
-
 /* ── ABOUT ──────────────────────────────── */
 .about { background: var(--white); }
 
@@ -558,12 +535,11 @@ p { margin: 0; }
 .feat-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 2rem 1.7rem;
+  overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 240ms ease, box-shadow 240ms ease;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
 }
 
 .feat-card:hover {
@@ -571,148 +547,212 @@ p { margin: 0; }
   box-shadow: var(--shadow-lg);
 }
 
-.feat-icon {
-  font-size: 1.6rem;
-  width: 52px; height: 52px;
-  background: var(--rose);
-  border-radius: 14px;
-  display: grid;
-  place-items: center;
+.feat-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
 }
 
-.feat-card h3 { font-size: 1.1rem; font-family: 'DM Sans', sans-serif; font-weight: 600; }
-.feat-card p  { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+.feat-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
 
-/* ── SERVICES BENTO ──────────────────────── */
+.feat-card:hover .feat-img img {
+  transform: scale(1.05);
+}
+
+.feat-card h3 {
+  font-size: 1.05rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  padding: 1.2rem 1.4rem 0.4rem;
+}
+
+.feat-card p  {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  padding: 0 1.4rem 1.4rem;
+}
+
+/* ── FLIP CARDS (Angebot) ─────────────────── */
 .services { background: var(--white); }
 
-.bento {
+.flip-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
 
-.bento-card {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+/* flip-card DARF KEIN transform vom reveal bekommen –
+   deshalb bekommt das grid selbst reveal,
+   die einzelnen Karten sind transform-frei */
+.flip-card {
+  height: 420px;
+  perspective: 1200px;
+  cursor: pointer;
+  /* Kein transform, kein opacity hier! */
+}
+
+.flip-inner {
   position: relative;
-  min-height: 280px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 650ms cubic-bezier(0.4, 0.2, 0.2, 1);
+  border-radius: var(--radius-lg);
 }
 
-.bento-hero {
-  grid-row: span 2;
+.flip-card.is-flipped .flip-inner {
+  transform: rotateY(180deg);
 }
 
-.bento-hero img,
-.bento-img img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.bento-overlay {
+.flip-front,
+.flip-back {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(42,31,36,0.78) 40%, rgba(42,31,36,0.1) 100%);
+  border-radius: var(--radius-lg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* FRONT – Foto mit Overlay */
+.flip-front {
+  background-image: var(--card-bg);
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-front::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(42,31,36,0.88) 40%, rgba(42,31,36,0.12) 100%);
+}
+
+.flip-front-overlay {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 2rem;
-  gap: 0.6rem;
+  padding: 1.75rem;
+  gap: 0.45rem;
   color: white;
+  z-index: 1;
 }
 
-.bento-overlay--sm {
-  padding: 1.5rem;
+.flip-front-overlay h3 {
+  color: white;
+  font-size: 1.25rem;
+  margin: 0;
 }
 
-.bento-overlay h3 { color: white; font-size: 1.5rem; }
-.bento-overlay p  { color: rgba(255,255,255,0.75); font-size: 0.88rem; line-height: 1.5; }
+.flip-front-overlay p {
+  color: rgba(255,255,255,0.68);
+  font-size: 0.82rem;
+  margin: 0;
+}
 
-.bento-tag {
+.flip-hint {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.flip-badge {
   display: inline-flex;
   background: var(--accent);
   color: white;
   border-radius: 999px;
-  padding: 0.2rem 0.7rem;
-  font-size: 0.7rem;
-  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   width: fit-content;
+  margin-bottom: 0.3rem;
 }
 
-.bento-dark {
-  background: var(--plum);
-  color: white;
-  padding: 2rem;
+/* BACK – Details */
+.flip-back {
+  background: var(--back-hue, var(--plum));
+  transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  padding: 2rem;
+  gap: 1rem;
+  z-index: 1;
 }
 
-.bento-dark h3 { color: white; }
-.bento-dark p  { color: rgba(255,255,255,0.6); font-size: 0.88rem; }
+.flip-back h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+  letter-spacing: 0.04em;
+}
 
-.bento-dark ul,
-.bento-soft ul {
+.flip-back ul {
   list-style: none;
   padding: 0; margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.flip-back li {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.88);
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.flip-back li::before {
+  content: '✓';
+  position: absolute; left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.btn--accent {
+  background: var(--accent);
+  color: white;
+  border-color: transparent;
+  width: fit-content;
+  box-shadow: 0 6px 18px rgba(212,121,106,0.4);
   margin-top: auto;
 }
 
-.bento-dark li {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.55);
-  padding-left: 1rem;
-  position: relative;
+.btn--accent:hover {
+  background: var(--accent-2);
+  box-shadow: 0 10px 24px rgba(212,121,106,0.5);
 }
 
-.bento-dark li::before {
-  content: '→';
-  position: absolute; left: 0;
-  color: var(--accent);
+/* Ghost button für dunklen Hintergrund (CTA-Sektion) */
+.btn--ghost-light {
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  border: 1.5px solid rgba(255,255,255,0.4);
 }
 
-.bento-soft {
-  background: var(--rose);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+.btn--ghost-light:hover {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border-color: rgba(255,255,255,0.7);
+  box-shadow: none;
 }
 
-.bento-soft h3 { color: var(--plum); }
-.bento-soft p  { color: var(--muted); font-size: 0.88rem; }
-
-.bento-soft li {
-  font-size: 0.82rem;
-  color: var(--muted);
-  padding-left: 1rem;
-  position: relative;
-}
-
-.bento-soft li::before {
-  content: '→';
-  position: absolute; left: 0;
-  color: var(--accent);
-}
-
-.bento-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  opacity: 0.15;
-  line-height: 1;
-  display: block;
-}
-
-.bento-dark .bento-num { color: white; }
-.bento-soft .bento-num { color: var(--accent); }
 
 /* ── REVIEWS ─────────────────────────────── */
 .reviews { background: var(--cream-2); }
@@ -1135,11 +1175,6 @@ details p {
   to   { transform: translateY(-10px); }
 }
 
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
 /* ── RESPONSIVE ──────────────────────────── */
 @media (max-width: 1024px) {
   .hero-inner        { grid-template-columns: 1fr; gap: 3rem; }
@@ -1147,8 +1182,7 @@ details p {
   .about-grid        { grid-template-columns: 1fr; gap: 3rem; }
   .about-photo       { display: none; }
   .features-grid     { grid-template-columns: repeat(2, 1fr); }
-  .bento             { grid-template-columns: 1fr; }
-  .bento-hero        { grid-row: auto; min-height: 360px; }
+  .flip-grid         { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid      { grid-template-columns: 1fr; }
   .pricing-grid      { grid-template-columns: 1fr; }
   .price-card--featured { transform: none; }
@@ -1183,6 +1217,7 @@ details p {
   }
 
   .features-grid { grid-template-columns: 1fr; }
+  .flip-grid     { grid-template-columns: 1fr; }
 
   .footer-inner  { grid-template-columns: 1fr; }
 
