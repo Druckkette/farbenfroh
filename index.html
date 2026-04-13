@@ -4,136 +4,159 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Farbenfroh – Farbberatung für deinen Stil</title>
-    <meta
-      name="description"
-      content="Farbenfroh hilft dir, deine persönlichen Farben zu entdecken – mit individueller Farbberatung, Stilprofil und konkreten Outfits für deinen Alltag."
-    />
+    <meta name="description" content="Farbenfroh hilft dir, deine persönlichen Farben zu entdecken – mit individueller Farbberatung, Stilprofil und konkreten Outfits für deinen Alltag." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header class="site-header" id="top">
-      <div class="container nav-wrap">
-        <a class="brand" href="#top" aria-label="Farbenfroh Startseite">
-          <span class="logo-badge" aria-hidden="true">F</span>
+
+    <!-- HEADER -->
+    <header class="header" id="top">
+      <div class="wrap header-inner">
+        <a class="logo" href="#top">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <circle cx="14" cy="14" r="14" fill="var(--rose)"/>
+            <circle cx="10" cy="12" r="4" fill="var(--accent)"/>
+            <circle cx="18" cy="16" r="3" fill="var(--plum)" opacity=".55"/>
+          </svg>
           Farbenfroh
         </a>
-
-        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
-          <span></span><span></span><span></span>
-          <span class="sr-only">Menü öffnen</span>
+        <button class="burger" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span>
         </button>
-
-        <nav class="nav" id="main-nav" aria-label="Hauptnavigation">
-          <a href="#about-me">Über mich</a>
+        <nav class="nav" id="nav">
+          <a href="#about">Über mich</a>
           <a href="#features">Leistungen</a>
           <a href="#reviews">Bewertungen</a>
-          <a href="#services">Beratung</a>
+          <a href="#pricing">Pakete</a>
           <a href="#faq">FAQ</a>
         </nav>
-
-        <div class="nav-actions">
-          <a class="btn btn-ghost" href="#contact">Kontakt</a>
-          <a class="btn btn-primary" href="#pricing">Jetzt starten</a>
-        </div>
+        <a href="#contact" class="btn btn-pill">Termin buchen</a>
       </div>
     </header>
 
     <main>
+
+      <!-- HERO -->
       <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-          <p class="eyebrow">Individuelle Farbberatung</p>
-          <h1>
-            Finde Farben, die
-            <em>deine Ausstrahlung</em>
-            auf den ersten Blick verstärken.
-          </h1>
-          <p>
-            Von Typanalyse bis Capsule-Wardrobe: Wir übersetzen Farbharmonie in klare Empfehlungen,
-            damit du morgens schneller entscheidest – und dich in jedem Look stimmig fühlst.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#pricing">Farbprofil buchen</a>
-            <a class="btn btn-soft" href="#services">Mehr erfahren</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="promise" id="about">
-        <div class="container promise-grid">
-          <div>
-            <h2>Stil beginnt dort, wo Farbe <em>bewusst</em> gewählt wird.</h2>
-          </div>
-          <div class="promise-mark" aria-hidden="true">✦</div>
-          <div>
-            <p>
-              Wir kombinieren Farblehre, Hautunterton-Analyse und Alltagstauglichkeit. So entstehen
-              Outfits, die nicht nur gut aussehen, sondern sich auch richtig anfühlen – im Job,
-              beim Event und im Alltag.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section about-me" id="about-me">
-        <div class="container about-me-grid">
-          <article class="about-photo-card reveal">
-            <div class="photo-placeholder" role="img" aria-label="Platzhalter für dein Porträtfoto">
-              <span>Dein Foto</span>
+        <div class="hero-blob" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob--2" aria-hidden="true"></div>
+        <div class="wrap hero-inner">
+          <div class="hero-text">
+            <span class="tag">Individuelle Farbberatung</span>
+            <h1>Deine Farben.<br><em>Deine Ausstrahlung.</em></h1>
+            <p>Von der Typanalyse bis zur Capsule-Wardrobe – ich übersetze Farbharmonie in klare Empfehlungen für deinen Alltag.</p>
+            <div class="hero-actions">
+              <a href="#pricing" class="btn btn-pill btn--dark">Farbprofil buchen</a>
+              <a href="#features" class="btn btn-text">Mehr erfahren ↓</a>
             </div>
-            <p class="photo-hint">Hier kann später dein persönliches Porträt eingesetzt werden.</p>
-          </article>
-          <article class="about-copy reveal">
-            <p class="eyebrow">Über Mich</p>
+            <div class="hero-social-proof">
+              <div class="avatars">
+                <img src="https://i.pravatar.cc/40?img=47" alt="" width="36" height="36"/>
+                <img src="https://i.pravatar.cc/40?img=32" alt="" width="36" height="36"/>
+                <img src="https://i.pravatar.cc/40?img=56" alt="" width="36" height="36"/>
+              </div>
+              <span>Über 120+ Kunden zufrieden</span>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-card hero-card--main">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Farbberatung" />
+            </div>
+            <div class="hero-card hero-card--float">
+              <div class="float-pill">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#e8bfb6"/></svg>
+                Farbkarte erstellt ✓
+              </div>
+            </div>
+            <div class="hero-card hero-card--badge">
+              <span class="badge-num">98%</span>
+              <span class="badge-label">Weiterempfehlung</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE STRIP -->
+      <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Farbanalyse</span><span>✦</span>
+          <span>Outfit-Formeln</span><span>✦</span>
+          <span>Capsule Wardrobe</span><span>✦</span>
+          <span>Shopping-Guide</span><span>✦</span>
+          <span>Hautunterton</span><span>✦</span>
+          <span>Stilprofil</span><span>✦</span>
+          <span>Live-Draping</span><span>✦</span>
+          <span>Follow-up Call</span><span>✦</span>
+          <span>Farbanalyse</span><span>✦</span>
+          <span>Outfit-Formeln</span><span>✦</span>
+          <span>Capsule Wardrobe</span><span>✦</span>
+          <span>Shopping-Guide</span><span>✦</span>
+          <span>Hautunterton</span><span>✦</span>
+          <span>Stilprofil</span><span>✦</span>
+          <span>Live-Draping</span><span>✦</span>
+          <span>Follow-up Call</span><span>✦</span>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <section class="section about" id="about">
+        <div class="wrap about-grid">
+          <div class="about-photo reveal">
+            <div class="photo-frame">
+              <div class="photo-inner">
+                <div class="photo-placeholder">
+                  <span>Dein Foto</span>
+                </div>
+              </div>
+              <div class="photo-deco" aria-hidden="true"></div>
+            </div>
+            <div class="about-stat-card">
+              <strong>5+</strong>
+              <span>Jahre Erfahrung</span>
+            </div>
+          </div>
+          <div class="about-copy reveal reveal--delay">
+            <span class="tag tag--muted">Über mich</span>
             <h2>Hallo, ich bin die Gründerin von Farbenfroh.</h2>
-            <p>
-              Ich unterstütze dich dabei, Farben zu tragen, die deine Persönlichkeit sichtbar machen.
-              Mit Feingefühl, klarer Analyse und einem entspannten Beratungsstil gestalten wir gemeinsam
-              Looks, die sich nach dir anfühlen – statt nach Trends.
-            </p>
-            <p>
-              Ganz gleich, ob du deinen Kleiderschrank neu sortieren, für einen wichtigen Anlass auftreten
-              oder deinen Stil langfristig aufbauen möchtest: Ich begleite dich Schritt für Schritt.
-            </p>
+            <p>Ich unterstütze dich dabei, Farben zu tragen, die deine Persönlichkeit sichtbar machen. Mit Feingefühl, klarer Analyse und einem entspannten Beratungsstil gestalten wir gemeinsam Looks, die sich nach dir anfühlen – statt nach Trends.</p>
+            <p>Ganz gleich, ob du deinen Kleiderschrank neu sortieren, für einen wichtigen Anlass auftreten oder deinen Stil langfristig aufbauen möchtest: Ich begleite dich Schritt für Schritt.</p>
             <div class="about-actions">
-              <a class="btn btn-soft" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram besuchen</a>
-              <a class="btn btn-ghost" href="#contact">Beratung anfragen</a>
+              <a href="https://www.instagram.com/" class="btn btn-pill" target="_blank" rel="noreferrer">Instagram besuchen</a>
+              <a href="#contact" class="btn btn-text">Beratung anfragen →</a>
             </div>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="features">
-        <div class="container">
-          <header class="section-head reveal">
-            <p class="eyebrow">Warum Farbenfroh</p>
-            <h2>Klare Ergebnisse statt vager Stil-Tipps.</h2>
-          </header>
-          <div class="feature-grid">
-            <article class="card tone-blush reveal">
-              <span class="chip">01 Analyse</span>
+      <!-- FEATURES -->
+      <section class="section features" id="features">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="tag tag--muted">Warum Farbenfroh</span>
+            <h2>Klare Ergebnisse statt<br>vager Stil-Tipps.</h2>
+          </div>
+          <div class="features-grid">
+            <article class="feat-card reveal">
+              <div class="feat-icon">🎨</div>
               <h3>Persönlicher Farbtyp</h3>
               <p>Präzise Auswertung von Unterton, Kontrast und Farbintensität inklusive Farbkarte.</p>
             </article>
-            <article class="card tone-mint reveal">
-              <span class="chip">02 Strategie</span>
+            <article class="feat-card reveal reveal--delay">
+              <div class="feat-icon">✂️</div>
               <h3>Outfit-System</h3>
               <p>Wir zeigen dir, welche Farben sich in deiner Garderobe mühelos kombinieren lassen.</p>
             </article>
-            <article class="card tone-sky reveal">
-              <span class="chip">03 Praxis</span>
+            <article class="feat-card reveal reveal--delay2">
+              <div class="feat-icon">🛍️</div>
               <h3>Shopping-Guide</h3>
               <p>Konkrete Hinweise für Stoffe, Accessoires und Lieblingspieces ohne Fehlkäufe.</p>
             </article>
-            <article class="card tone-sand reveal">
-              <span class="chip">04 Begleitung</span>
+            <article class="feat-card reveal reveal--delay3">
+              <div class="feat-icon">📞</div>
               <h3>Follow-up Call</h3>
               <p>Nach der Beratung klären wir offene Fragen und optimieren bestehende Looks.</p>
             </article>
@@ -141,171 +164,160 @@
         </div>
       </section>
 
+      <!-- SERVICES BENTO -->
       <section class="section services" id="services">
-        <div class="container">
-          <header class="section-head reveal">
-            <p class="eyebrow">Unsere Angebote</p>
-            <h2>Farbberatung, die mit deinem Alltag funktioniert.</h2>
-          </header>
-          <div class="mosaic offer-mosaic">
-            <!-- FIX: Dupliziertes offer-reveal und doppelter trigger entfernt -->
-            <article id="premium-session-card" class="mosaic-item tall image-card offer-card offer-card-premium">
-              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="Beratungssituation mit Farbmustern" loading="lazy" />
-              <div class="mosaic-content">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="tag tag--muted">Unsere Angebote</span>
+            <h2>Farbberatung für<br>jeden Anlass.</h2>
+          </div>
+          <div class="bento">
+            <article class="bento-card bento-hero reveal">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="1:1 Premium Session" loading="lazy" />
+              <div class="bento-overlay">
+                <span class="bento-tag">Bestseller</span>
                 <h3>1:1 Premium Session</h3>
                 <p>90 Minuten inklusive digitaler Farbpalette und individueller Stil-Roadmap.</p>
-                <button class="offer-trigger" type="button" aria-expanded="false" aria-controls="premium-session-reveal">Details ansehen</button>
-              </div>
-              <div id="premium-session-reveal" class="offer-reveal" aria-hidden="true">
-                <h4>Das ist enthalten</h4>
-                <ul>
-                  <li>Farbanalyse mit Live-Draping</li>
-                  <li>Persönliche Outfit-Formel für Alltag & Events</li>
-                  <li>Digitale Palette + Einkaufsliste</li>
-                </ul>
+                <a href="#pricing" class="btn btn-pill btn--light">Jetzt buchen</a>
               </div>
             </article>
-            <article class="mosaic-item tone-dark offer-card">
+            <article class="bento-card bento-dark reveal">
+              <span class="bento-num">02</span>
               <h3>Business Color Code</h3>
-              <p>Wir definieren deine Signature-Farben für Meetings, Pitches und LinkedIn-Fotos, damit du sofort professioneller und klarer wirkst.</p>
-              <button class="offer-trigger" type="button" aria-expanded="false">Mehr Details</button>
-              <div class="offer-reveal" aria-hidden="true">
-                <h4>Beispiel-Ergebnis</h4>
-                <ul>
-                  <li>3 Business-Outfits mit klarer Farbdramaturgie</li>
-                  <li>Dresscode-Sicherheiten für Bühne, Meeting und Event</li>
-                  <li>Konkrete Farbcodes für Blazer, Tops und Accessoires</li>
-                </ul>
-              </div>
+              <p>Deine Signature-Farben für Meetings, Pitches und LinkedIn-Fotos.</p>
+              <ul>
+                <li>3 Business-Outfits</li>
+                <li>Dresscode-Klarheit</li>
+                <li>Konkrete Farbcodes</li>
+              </ul>
             </article>
-            <article class="mosaic-item tone-cream offer-card">
+            <article class="bento-card bento-soft reveal reveal--delay">
+              <span class="bento-num">03</span>
               <h3>Closet Refresh</h3>
-              <p>Gemeinsam sortieren wir deine Teile nach Farbfamilien und bauen daraus Looks, die morgens ohne Grübeln funktionieren.</p>
-              <button class="offer-trigger" type="button" aria-expanded="false">Mehr Details</button>
-              <div class="offer-reveal" aria-hidden="true">
-                <h4>Beispiel-Ergebnis</h4>
-                <ul>
-                  <li>12 fertige Outfit-Formeln (Arbeit, Freizeit, Abend)</li>
-                  <li>Packliste für Reisen mit nur 2 Farbfamilien</li>
-                  <li>Einkaufsliste mit 5 gezielten Ergänzungsstücken</li>
-                </ul>
-              </div>
+              <p>Looks, die morgens ohne Grübeln funktionieren.</p>
+              <ul>
+                <li>12 Outfit-Formeln</li>
+                <li>Reise-Packliste</li>
+                <li>5 Ergänzungsstücke</li>
+              </ul>
             </article>
-            <article class="mosaic-item image-card">
-              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=80" alt="Farbberatung mit Stoffen und Make-up" loading="lazy" />
-              <div class="mosaic-content">
+            <article class="bento-card bento-img reveal reveal--delay2">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Mini-Stilcheck" loading="lazy" />
+              <div class="bento-overlay bento-overlay--sm">
                 <h3>Mini-Stilcheck</h3>
-                <p>In 30 Minuten bekommst du 3 sofort umsetzbare Farbkombinationen für deinen Alltag.</p>
+                <p>30 Min · 3 sofort umsetzbare Farbkombinationen</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="pricing" id="pricing">
-        <div class="pricing-overlay"></div>
-        <div class="container pricing-content">
-          <header class="section-head light">
-            <p class="eyebrow">Pakete</p>
-            <h2>Wähle den Plan, der zu deinem Stilziel passt.</h2>
-          </header>
+      <!-- TESTIMONIALS -->
+      <section class="section reviews" id="reviews">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="tag tag--muted">Kundenstimmen</span>
+            <h2>Ergebnisse, die man<br>sieht – und fühlt.</h2>
+          </div>
+          <div class="reviews-grid">
+            <article class="review-card reveal">
+              <p class="stars">★★★★★</p>
+              <blockquote>„Ich hätte nie gedacht, wie viel ein paar richtige Farben ausmachen. Seitdem bekomme ich täglich Komplimente!"</blockquote>
+              <div class="review-author">
+                <div class="review-avatar">A</div>
+                <div>
+                  <strong>Anna K.</strong>
+                  <span>Grafikdesignerin</span>
+                </div>
+              </div>
+            </article>
+            <article class="review-card review-card--featured reveal reveal--delay">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" class="review-bg" alt="" loading="lazy" />
+              <div class="review-content">
+                <p class="stars">★★★★★</p>
+                <blockquote>„Mega Beratung! Ich weiß endlich, welche Farben mich frisch aussehen lassen."</blockquote>
+                <div class="review-author review-author--light">
+                  <div class="review-avatar review-avatar--light">L</div>
+                  <div>
+                    <strong>Leonie R.</strong>
+                    <span>Marketing Managerin</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="review-card reveal reveal--delay2">
+              <p class="stars">★★★★★</p>
+              <blockquote>„Super sympathisch und total alltagstauglich. Mein Kleiderschrank ist jetzt viel klarer."</blockquote>
+              <div class="review-author">
+                <div class="review-avatar">M</div>
+                <div>
+                  <strong>Mara S.</strong>
+                  <span>Selbstständig</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
+      <!-- PRICING -->
+      <section class="section pricing" id="pricing">
+        <div class="pricing-bg" aria-hidden="true"></div>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="tag tag--muted">Pakete</span>
+            <h2>Wähle deinen<br>Weg zur Stilklarheit.</h2>
+          </div>
           <div class="pricing-grid">
             <article class="price-card reveal">
-              <h3>Starter</h3>
-              <p class="price">79€</p>
+              <div class="price-header">
+                <h3>Starter</h3>
+                <p class="price">79€</p>
+              </div>
               <ul>
                 <li>30 Min Farbcheck</li>
                 <li>Mini-Palette (PDF)</li>
                 <li>2 Outfit-Empfehlungen</li>
               </ul>
-              <a href="#contact" class="btn btn-soft">Auswählen</a>
+              <a href="#contact" class="btn btn-pill btn--outline">Auswählen</a>
             </article>
-            <article class="price-card featured reveal">
-              <p class="badge">Beliebt</p>
-              <h3>Signature</h3>
-              <p class="price">149€</p>
+            <article class="price-card price-card--featured reveal reveal--delay">
+              <div class="price-popular">Beliebt</div>
+              <div class="price-header">
+                <h3>Signature</h3>
+                <p class="price">149€</p>
+              </div>
               <ul>
                 <li>90 Min Intensivberatung</li>
                 <li>Farbkarte + Stilprofil</li>
                 <li>Shopping-Shortlist</li>
                 <li>14 Tage Follow-up</li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Jetzt buchen</a>
+              <a href="#contact" class="btn btn-pill btn--dark">Jetzt buchen</a>
             </article>
-            <article class="price-card reveal">
-              <h3>Studio+</h3>
-              <p class="price">229€</p>
+            <article class="price-card reveal reveal--delay2">
+              <div class="price-header">
+                <h3>Studio+</h3>
+                <p class="price">229€</p>
+              </div>
               <ul>
-                <li>Signature Paket</li>
+                <li>Alles aus Signature</li>
                 <li>Closet Review</li>
                 <li>Event-Look Planung</li>
               </ul>
-              <a href="#contact" class="btn btn-soft">Anfragen</a>
+              <a href="#contact" class="btn btn-pill btn--outline">Anfragen</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section testimonials" id="reviews">
-        <div class="container">
-          <header class="section-head reveal">
-            <p class="eyebrow">Kundenbewertungen</p>
-            <h2>Ergebnisse, die man sieht – und fühlt.</h2>
-          </header>
-          <div class="review-showcase reveal">
-            <img
-              class="review-photo"
-              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1200&q=80"
-              alt="Kundin bei einer Farbberatung"
-              loading="lazy"
-            />
-            <div class="review-rotator" aria-live="polite">
-              <!-- FIX: Erstes Review war falsches Englisch-Placeholder-Template – durch echtes ersetzt -->
-              <article class="review-card active">
-                <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
-                <p>„Ich hätte nie gedacht, wie viel ein paar richtige Farben ausmachen. <em>Seitdem bekomme ich täglich Komplimente!"</em></p>
-                <div class="review-meta">
-                  <div class="avatar" aria-hidden="true">A</div>
-                  <div>
-                    <h3>Anna K.</h3>
-                    <p>Grafikdesignerin</p>
-                  </div>
-                </div>
-              </article>
-              <article class="review-card">
-                <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
-                <p>„Mega Beratung! Ich weiß endlich, welche Farben mich frisch aussehen lassen."</p>
-                <div class="review-meta">
-                  <div class="avatar" aria-hidden="true">L</div>
-                  <div>
-                    <h3>Leonie R.</h3>
-                    <p>Marketing Managerin</p>
-                  </div>
-                </div>
-              </article>
-              <article class="review-card">
-                <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
-                <p>„Super sympathisch und total alltagstauglich. Mein Kleiderschrank ist jetzt viel klarer."</p>
-                <div class="review-meta">
-                  <div class="avatar" aria-hidden="true">M</div>
-                  <div>
-                    <h3>Mara S.</h3>
-                    <p>Selbstständig</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <!-- FAQ -->
       <section class="section faq" id="faq">
-        <div class="container">
-          <header class="section-head reveal">
-            <p class="eyebrow">Häufig gestellte Fragen</p>
-            <h2>Alles Wichtige auf einen Blick.</h2>
-          </header>
+        <div class="wrap faq-inner">
+          <div class="section-head section-head--left reveal">
+            <span class="tag tag--muted">FAQ</span>
+            <h2>Häufig gestellte<br>Fragen.</h2>
+          </div>
           <div class="faq-list">
             <details class="reveal">
               <summary>Kann ich die Beratung bei mir zu Hause machen?</summary>
@@ -324,65 +336,75 @@
               <p>Am besten kommst du ungeschminkt oder dezent geschminkt und bringst 2–3 Lieblingsstücke aus deinem Kleiderschrank mit.</p>
             </details>
             <details class="reveal">
-              <summary>Kann ich dich auch für Veranstaltungen und Feiern buchen?</summary>
+              <summary>Kann ich dich auch für Veranstaltungen buchen?</summary>
               <p>Ja, ich biete mobile Farbberatung für Events, Feiern und Firmenveranstaltungen an.</p>
             </details>
           </div>
         </div>
       </section>
 
-      <section class="final-cta" id="contact">
-        <div class="container cta-wrap">
-          <h2>Bereit für einen Look, der sich endlich nach <em>dir</em> anfühlt?</h2>
-          <p>Buche dein unverbindliches Erstgespräch und starte in 20 Minuten mit mehr Stilklarheit.</p>
+      <!-- FINAL CTA -->
+      <section class="cta-section" id="contact">
+        <div class="cta-blob" aria-hidden="true"></div>
+        <div class="wrap cta-inner">
+          <span class="tag">Bereit?</span>
+          <h2>Dein nächster Look<br>beginnt hier.</h2>
+          <p>Buche dein unverbindliches Erstgespräch und starte mit mehr Stilklarheit.</p>
           <div class="cta-actions">
-            <a href="mailto:hello@farbenfroh.de" class="btn btn-primary">Erstgespräch sichern</a>
-            <a href="#pricing" class="btn btn-soft">Gutschein kaufen</a>
+            <a href="mailto:hello@farbenfroh.de" class="btn btn-pill btn--dark">Erstgespräch sichern</a>
+            <a href="#pricing" class="btn btn-pill btn--outline">Gutschein kaufen</a>
           </div>
         </div>
       </section>
+
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a class="brand" href="#top">Farbenfroh</a>
-          <p>Digitale Farbberatung mit Herz, Strategie und einem klaren Blick für deinen Typ.</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div class="footer-brand">
+          <a class="logo" href="#top">
+            <svg width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="14" fill="var(--rose)"/>
+              <circle cx="10" cy="12" r="4" fill="var(--accent)"/>
+              <circle cx="18" cy="16" r="3" fill="var(--plum)" opacity=".55"/>
+            </svg>
+            Farbenfroh
+          </a>
+          <p>Farbberatung mit Herz, Strategie und einem klaren Blick für deinen Typ.</p>
         </div>
-        <div>
+        <div class="footer-col">
           <h4>Navigation</h4>
-          <ul>
-            <li><a href="#about-me">Über mich</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#reviews">Bewertungen</a></li>
-            <li><a href="#pricing">Pakete</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
+          <a href="#about">Über mich</a>
+          <a href="#services">Services</a>
+          <a href="#reviews">Bewertungen</a>
+          <a href="#pricing">Pakete</a>
+          <a href="#faq">FAQ</a>
         </div>
-        <div>
+        <div class="footer-col">
           <h4>Kontakt</h4>
-          <ul>
-            <li><a href="mailto:hello@farbenfroh.de">hello@farbenfroh.de</a></li>
-            <li><a href="tel:+49123456789">+49 123 456 789</a></li>
-          </ul>
+          <a href="mailto:hello@farbenfroh.de">hello@farbenfroh.de</a>
+          <a href="tel:+49123456789">+49 123 456 789</a>
         </div>
-        <div>
+        <div class="footer-col">
           <h4>Newsletter</h4>
-          <form class="newsletter">
-            <label for="email" class="sr-only">E-Mail</label>
-            <input id="email" type="email" placeholder="Deine E-Mail-Adresse" required />
-            <button type="submit">Abonnieren</button>
+          <form class="newsletter-form">
+            <label for="footer-email" class="sr-only">E-Mail</label>
+            <input id="footer-email" type="email" placeholder="Deine E-Mail" required />
+            <button type="submit">→</button>
           </form>
+          <p class="newsletter-hint">Stil-Tipps direkt ins Postfach.</p>
         </div>
       </div>
-      <div class="container footer-bottom">
-        <small>© 2026 Farbenfroh. Alle Rechte vorbehalten.</small>
-        <div class="legal-links">
-          <a href="#" aria-label="Impressum öffnen">Impressum</a>
-          <a href="#" aria-label="Datenschutzerklärung öffnen">Datenschutzerklärung</a>
-          <a href="#" aria-label="AGB öffnen">AGB</a>
+      <div class="wrap footer-bottom">
+        <small>© 2026 Farbenfroh</small>
+        <div class="legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+          <a href="#">AGB</a>
         </div>
       </div>
     </footer>
+
   </body>
 </html>
