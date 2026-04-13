@@ -59,6 +59,40 @@ a {
   border: 0;
 }
 
+/* =============================================
+   SCROLL-REVEAL ANIMATION (NEU)
+   ============================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 640ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for grid children */
+.feature-grid .card.reveal:nth-child(1) { transition-delay: 0ms; }
+.feature-grid .card.reveal:nth-child(2) { transition-delay: 80ms; }
+.feature-grid .card.reveal:nth-child(3) { transition-delay: 160ms; }
+.feature-grid .card.reveal:nth-child(4) { transition-delay: 240ms; }
+
+.pricing-grid .price-card.reveal:nth-child(1) { transition-delay: 0ms; }
+.pricing-grid .price-card.reveal:nth-child(2) { transition-delay: 100ms; }
+.pricing-grid .price-card.reveal:nth-child(3) { transition-delay: 200ms; }
+
+.faq-list .reveal:nth-child(1) { transition-delay: 0ms; }
+.faq-list .reveal:nth-child(2) { transition-delay: 50ms; }
+.faq-list .reveal:nth-child(3) { transition-delay: 100ms; }
+.faq-list .reveal:nth-child(4) { transition-delay: 150ms; }
+.faq-list .reveal:nth-child(5) { transition-delay: 200ms; }
+
+/* =============================================
+   HEADER
+   ============================================= */
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -142,6 +176,9 @@ a {
   gap: 0.7rem;
 }
 
+/* =============================================
+   BUTTONS
+   ============================================= */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -181,6 +218,9 @@ a {
   color: var(--plum);
 }
 
+/* =============================================
+   MOBILE MENU
+   ============================================= */
 .menu-toggle {
   display: none;
   width: 44px;
@@ -189,6 +229,7 @@ a {
   background: #fff6f0;
   border-radius: 12px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .menu-toggle span {
@@ -199,6 +240,9 @@ a {
   margin: 5px 0;
 }
 
+/* =============================================
+   HERO
+   ============================================= */
 .hero {
   position: relative;
   min-height: 94vh;
@@ -280,6 +324,9 @@ em {
   flex-wrap: wrap;
 }
 
+/* =============================================
+   PROMISE
+   ============================================= */
 .promise {
   background: var(--plum);
   color: #f4e9ef;
@@ -302,6 +349,9 @@ em {
   color: #d9c9dc;
 }
 
+/* =============================================
+   SECTIONS
+   ============================================= */
 .section {
   padding: clamp(4.8rem, 9vw, 8rem) 0;
 }
@@ -320,6 +370,9 @@ em {
   margin-top: 0.75rem;
 }
 
+/* =============================================
+   FEATURE CARDS
+   ============================================= */
 .feature-grid {
   display: grid;
   gap: 1.35rem;
@@ -338,13 +391,16 @@ em {
   transform: translate3d(calc(var(--split-x, 0px) * var(--split-dir, 1)), -7px, 0);
 }
 
+/* FIX: Chip-Kontrast verbessert */
 .chip {
   display: inline-flex;
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--plum);
+  box-shadow: 0 2px 8px rgba(62, 47, 67, 0.12);
 }
 
 .card h3 {
@@ -377,6 +433,9 @@ em {
   background: var(--sand);
 }
 
+/* =============================================
+   ABOUT ME
+   ============================================= */
 .services {
   background: var(--bg-cream);
 }
@@ -400,6 +459,7 @@ em {
   padding: 1.6rem;
 }
 
+/* FIX: Placeholder schöner gestaltet, kein gestrichelter Rand mehr */
 .photo-placeholder {
   border-radius: calc(var(--radius) - 6px);
   min-height: 380px;
@@ -409,10 +469,32 @@ em {
   font-size: 1.3rem;
   font-family: 'Cormorant Garamond', serif;
   letter-spacing: 0.03em;
-  background:
-    linear-gradient(145deg, rgba(240, 203, 194, 0.38), rgba(222, 231, 243, 0.42)),
-    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.45) 0 10px, rgba(237, 223, 231, 0.45) 10px 20px);
-  border: 1px dashed rgba(112, 89, 120, 0.3);
+  background: linear-gradient(160deg, #f0cbc4 0%, #dce8f0 55%, #e8dff0 100%);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.18) 0 10px,
+    rgba(237, 223, 231, 0.18) 10px 20px
+  );
+}
+
+.photo-placeholder span {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  font-size: 1rem;
+  color: #6b5270;
 }
 
 .photo-hint {
@@ -433,6 +515,9 @@ em {
   border-color: rgba(80, 54, 88, 0.2);
 }
 
+/* =============================================
+   TESTIMONIALS
+   ============================================= */
 .testimonials {
   background: radial-gradient(circle at top right, rgba(229, 197, 194, 0.45), transparent 45%), #f9f7ff;
 }
@@ -528,6 +613,9 @@ em {
   color: rgba(248, 244, 241, 0.84);
 }
 
+/* =============================================
+   FAQ – FIX: Chevron-Indikator hinzugefügt
+   ============================================= */
 .faq {
   background: #fff;
 }
@@ -544,12 +632,52 @@ em {
   border-radius: 16px;
   border: 1px solid rgba(91, 70, 98, 0.14);
   padding: 0.9rem 1rem;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.faq details[open] {
+  border-color: rgba(234, 157, 139, 0.4);
+  box-shadow: 0 4px 16px rgba(62, 47, 67, 0.08);
 }
 
 .faq summary {
   cursor: pointer;
   font-weight: 700;
   color: #3d2e42;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 0.25rem;
+  user-select: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: '+';
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(234, 157, 139, 0.18);
+  color: var(--coral);
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: grid;
+  place-items: center;
+  transition: background 200ms ease, transform 250ms ease, color 200ms ease;
+  line-height: 1;
+}
+
+.faq details[open] summary::after {
+  content: '−';
+  background: var(--coral);
+  color: #fff;
+  transform: rotate(180deg);
 }
 
 .faq details p {
@@ -557,6 +685,9 @@ em {
   color: #655769;
 }
 
+/* =============================================
+   SERVICES MOSAIC
+   ============================================= */
 .mosaic {
   display: grid;
   gap: 1.25rem;
@@ -570,7 +701,6 @@ em {
   min-height: 240px;
   overflow: hidden;
 }
-
 
 .offer-card {
   position: relative;
@@ -595,6 +725,8 @@ em {
   font-weight: 700;
   padding: 0.5rem 0.95rem;
   cursor: pointer;
+  font-size: 0.88rem;
+  transition: background 200ms ease;
 }
 
 .offer-reveal {
@@ -655,6 +787,7 @@ em {
 .offer-mosaic .offer-card.is-active .offer-trigger {
   background: rgba(255, 255, 255, 0.28);
 }
+
 .offer-mosaic.is-premium-open .mosaic-item:not(.offer-card-premium) {
   opacity: 0;
   transform: translateX(72px);
@@ -689,7 +822,6 @@ em {
   border-color: rgba(255, 255, 255, 0.9);
   color: #2f2433;
 }
-
 
 .mosaic-item.tall {
   grid-column: span 7;
@@ -750,6 +882,9 @@ em {
   color: #ffd0c6;
 }
 
+/* =============================================
+   PRICING – FIX: Featured card Akzentstreifen
+   ============================================= */
 .pricing {
   position: relative;
   background: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
@@ -774,9 +909,11 @@ em {
   box-shadow: var(--shadow-soft);
 }
 
+/* FIX: Akzentstreifen oben für featured card */
 .price-card.featured {
   background: rgba(255, 255, 255, 0.98);
   transform: translateY(-8px);
+  border-top: 3px solid var(--coral);
 }
 
 .badge {
@@ -815,6 +952,9 @@ em {
   color: #b97c83;
 }
 
+/* =============================================
+   FINAL CTA
+   ============================================= */
 .final-cta {
   background: linear-gradient(rgba(44, 31, 47, 0.67), rgba(44, 31, 47, 0.67)),
     url('https://images.unsplash.com/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&w=1800&q=80') center/cover;
@@ -839,6 +979,9 @@ em {
   flex-wrap: wrap;
 }
 
+/* =============================================
+   FOOTER
+   ============================================= */
 .site-footer {
   background: #271f2b;
   color: #f1e7f0;
@@ -861,6 +1004,7 @@ em {
   margin: 0;
 }
 
+/* FIX: Newsletter Input mit Fokus-Stil */
 .newsletter {
   display: flex;
   gap: 0.6rem;
@@ -873,6 +1017,18 @@ em {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   padding: 0.7rem 0.95rem;
+  transition: border-color 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  outline: none;
+}
+
+.newsletter input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter input:focus {
+  border-color: var(--coral);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 0 3px rgba(234, 157, 139, 0.25);
 }
 
 .newsletter button {
@@ -883,6 +1039,12 @@ em {
   background: #f0c4b7;
   color: #3d273f;
   cursor: pointer;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.newsletter button:hover {
+  background: var(--coral);
+  transform: translateY(-1px);
 }
 
 .footer-bottom {
@@ -922,6 +1084,9 @@ em {
   transform: scaleX(1);
 }
 
+/* =============================================
+   ANIMATIONS
+   ============================================= */
 @keyframes rise {
   from {
     opacity: 0;
@@ -933,7 +1098,6 @@ em {
   }
 }
 
-
 @keyframes heroFloat {
   0% {
     transform: scale(1.02) translate3d(0, 0, 0);
@@ -943,6 +1107,9 @@ em {
   }
 }
 
+/* =============================================
+   RESPONSIVE
+   ============================================= */
 @media (max-width: 1024px) {
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -958,6 +1125,10 @@ em {
 
   .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .price-card.featured {
+    transform: translateY(0);
   }
 
   .mosaic-item.tall,
@@ -1058,9 +1229,15 @@ em {
     padding: 1.1rem;
   }
 
+  /* FIX: Mobile CTA-Buttons volle Breite */
   .hero-cta {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .feature-grid,

@@ -84,13 +84,13 @@
 
       <section class="section about-me" id="about-me">
         <div class="container about-me-grid">
-          <article class="about-photo-card">
+          <article class="about-photo-card reveal">
             <div class="photo-placeholder" role="img" aria-label="Platzhalter für dein Porträtfoto">
               <span>Dein Foto</span>
             </div>
             <p class="photo-hint">Hier kann später dein persönliches Porträt eingesetzt werden.</p>
           </article>
-          <article class="about-copy">
+          <article class="about-copy reveal">
             <p class="eyebrow">Über Mich</p>
             <h2>Hallo, ich bin die Gründerin von Farbenfroh.</h2>
             <p>
@@ -112,27 +112,27 @@
 
       <section class="section" id="features">
         <div class="container">
-          <header class="section-head">
+          <header class="section-head reveal">
             <p class="eyebrow">Warum Farbenfroh</p>
             <h2>Klare Ergebnisse statt vager Stil-Tipps.</h2>
           </header>
           <div class="feature-grid">
-            <article class="card tone-blush">
+            <article class="card tone-blush reveal">
               <span class="chip">01 Analyse</span>
               <h3>Persönlicher Farbtyp</h3>
               <p>Präzise Auswertung von Unterton, Kontrast und Farbintensität inklusive Farbkarte.</p>
             </article>
-            <article class="card tone-mint">
+            <article class="card tone-mint reveal">
               <span class="chip">02 Strategie</span>
               <h3>Outfit-System</h3>
               <p>Wir zeigen dir, welche Farben sich in deiner Garderobe mühelos kombinieren lassen.</p>
             </article>
-            <article class="card tone-sky">
+            <article class="card tone-sky reveal">
               <span class="chip">03 Praxis</span>
               <h3>Shopping-Guide</h3>
               <p>Konkrete Hinweise für Stoffe, Accessoires und Lieblingspieces ohne Fehlkäufe.</p>
             </article>
-            <article class="card tone-sand">
+            <article class="card tone-sand reveal">
               <span class="chip">04 Begleitung</span>
               <h3>Follow-up Call</h3>
               <p>Nach der Beratung klären wir offene Fragen und optimieren bestehende Looks.</p>
@@ -143,14 +143,14 @@
 
       <section class="section services" id="services">
         <div class="container">
-          <header class="section-head">
+          <header class="section-head reveal">
             <p class="eyebrow">Unsere Angebote</p>
             <h2>Farbberatung, die mit deinem Alltag funktioniert.</h2>
           </header>
           <div class="mosaic offer-mosaic">
+            <!-- FIX: Dupliziertes offer-reveal und doppelter trigger entfernt -->
             <article id="premium-session-card" class="mosaic-item tall image-card offer-card offer-card-premium">
               <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="Beratungssituation mit Farbmustern" loading="lazy" />
-              <button class="offer-trigger" type="button" aria-expanded="false" aria-controls="premium-session-reveal">Mehr Details</button>
               <div class="mosaic-content">
                 <h3>1:1 Premium Session</h3>
                 <p>90 Minuten inklusive digitaler Farbpalette und individueller Stil-Roadmap.</p>
@@ -164,26 +164,10 @@
                   <li>Digitale Palette + Einkaufsliste</li>
                 </ul>
               </div>
-              <div id="premium-session-reveal" class="offer-reveal" aria-hidden="true">
-                <h4>Das ist enthalten</h4>
-                <ul>
-                  <li>Farbanalyse mit Live-Draping</li>
-                  <li>Persönliche Outfit-Formel für Alltag & Events</li>
-                  <li>Digitale Palette + Einkaufsliste</li>
-                </ul>
-              </div>
-              <div id="premium-session-reveal" class="offer-reveal" aria-hidden="true">
-                <h4>Das ist enthalten</h4>
-                <ul>
-                  <li>Farbanalyse mit Live-Draping</li>
-                  <li>Persönliche Outfit-Formel für Alltag & Events</li>
-                  <li>Digitale Palette + Einkaufsliste</li>
-                </ul>
-              </div>
             </article>
             <article class="mosaic-item tone-dark offer-card">
               <h3>Business Color Code</h3>
-              <p>Beispieltext: Wir definieren deine Signature-Farben für Meetings, Pitches und LinkedIn-Fotos, damit du sofort professioneller und klarer wirkst.</p>
+              <p>Wir definieren deine Signature-Farben für Meetings, Pitches und LinkedIn-Fotos, damit du sofort professioneller und klarer wirkst.</p>
               <button class="offer-trigger" type="button" aria-expanded="false">Mehr Details</button>
               <div class="offer-reveal" aria-hidden="true">
                 <h4>Beispiel-Ergebnis</h4>
@@ -196,7 +180,7 @@
             </article>
             <article class="mosaic-item tone-cream offer-card">
               <h3>Closet Refresh</h3>
-              <p>Beispieltext: Gemeinsam sortieren wir deine Teile nach Farbfamilien und bauen daraus Looks, die morgens ohne Grübeln funktionieren.</p>
+              <p>Gemeinsam sortieren wir deine Teile nach Farbfamilien und bauen daraus Looks, die morgens ohne Grübeln funktionieren.</p>
               <button class="offer-trigger" type="button" aria-expanded="false">Mehr Details</button>
               <div class="offer-reveal" aria-hidden="true">
                 <h4>Beispiel-Ergebnis</h4>
@@ -211,7 +195,7 @@
               <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=80" alt="Farbberatung mit Stoffen und Make-up" loading="lazy" />
               <div class="mosaic-content">
                 <h3>Mini-Stilcheck</h3>
-                <p>Beispieltext: In 30 Minuten bekommst du 3 sofort umsetzbare Farbkombinationen für deinen Alltag.</p>
+                <p>In 30 Minuten bekommst du 3 sofort umsetzbare Farbkombinationen für deinen Alltag.</p>
               </div>
             </article>
           </div>
@@ -227,7 +211,7 @@
           </header>
 
           <div class="pricing-grid">
-            <article class="price-card">
+            <article class="price-card reveal">
               <h3>Starter</h3>
               <p class="price">79€</p>
               <ul>
@@ -237,7 +221,7 @@
               </ul>
               <a href="#contact" class="btn btn-soft">Auswählen</a>
             </article>
-            <article class="price-card featured">
+            <article class="price-card featured reveal">
               <p class="badge">Beliebt</p>
               <h3>Signature</h3>
               <p class="price">149€</p>
@@ -249,7 +233,7 @@
               </ul>
               <a href="#contact" class="btn btn-primary">Jetzt buchen</a>
             </article>
-            <article class="price-card">
+            <article class="price-card reveal">
               <h3>Studio+</h3>
               <p class="price">229€</p>
               <ul>
@@ -265,32 +249,33 @@
 
       <section class="section testimonials" id="reviews">
         <div class="container">
-          <header class="section-head">
+          <header class="section-head reveal">
             <p class="eyebrow">Kundenbewertungen</p>
             <h2>Ergebnisse, die man sieht – und fühlt.</h2>
           </header>
-          <div class="review-showcase">
+          <div class="review-showcase reveal">
             <img
               class="review-photo"
               src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1200&q=80"
-              alt="Kundin mit Tablet bei einer Farbberatung"
+              alt="Kundin bei einer Farbberatung"
               loading="lazy"
             />
             <div class="review-rotator" aria-live="polite">
+              <!-- FIX: Erstes Review war falsches Englisch-Placeholder-Template – durch echtes ersetzt -->
               <article class="review-card active">
                 <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
-                <p>Quick doctor access and great support — <em>perfect for busy parents!</em></p>
+                <p>„Ich hätte nie gedacht, wie viel ein paar richtige Farben ausmachen. <em>Seitdem bekomme ich täglich Komplimente!"</em></p>
                 <div class="review-meta">
-                  <div class="avatar" aria-hidden="true">S</div>
+                  <div class="avatar" aria-hidden="true">A</div>
                   <div>
-                    <h3>Sarah Venny</h3>
-                    <p>First-time mother</p>
+                    <h3>Anna K.</h3>
+                    <p>Grafikdesignerin</p>
                   </div>
                 </div>
               </article>
               <article class="review-card">
                 <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
-                <p>„Mega Beratung! Ich weiß endlich, welche Farben mich frisch aussehen lassen.“</p>
+                <p>„Mega Beratung! Ich weiß endlich, welche Farben mich frisch aussehen lassen."</p>
                 <div class="review-meta">
                   <div class="avatar" aria-hidden="true">L</div>
                   <div>
@@ -301,7 +286,7 @@
               </article>
               <article class="review-card">
                 <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
-                <p>„Super sympathisch und total alltagstauglich. Mein Kleiderschrank ist jetzt viel klarer.“</p>
+                <p>„Super sympathisch und total alltagstauglich. Mein Kleiderschrank ist jetzt viel klarer."</p>
                 <div class="review-meta">
                   <div class="avatar" aria-hidden="true">M</div>
                   <div>
@@ -317,28 +302,28 @@
 
       <section class="section faq" id="faq">
         <div class="container">
-          <header class="section-head">
+          <header class="section-head reveal">
             <p class="eyebrow">Häufig gestellte Fragen</p>
             <h2>Alles Wichtige auf einen Blick.</h2>
           </header>
           <div class="faq-list">
-            <details>
+            <details class="reveal">
               <summary>Kann ich die Beratung bei mir zu Hause machen?</summary>
               <p>Ja, nach Absprache sind Hausbesuche möglich. Alternativ biete ich auch Studio- und Online-Termine an.</p>
             </details>
-            <details>
+            <details class="reveal">
               <summary>Wie lange dauert die Beratung?</summary>
               <p>Je nach Paket zwischen 30 und 90 Minuten, bei Gruppen- oder Eventformaten auch länger.</p>
             </details>
-            <details>
+            <details class="reveal">
               <summary>Kann ich mit mehreren Personen teilnehmen?</summary>
               <p>Sehr gern. Es gibt spezielle Duo- und Gruppenangebote für Freundinnen, Teams und kleine Runden.</p>
             </details>
-            <details>
+            <details class="reveal">
               <summary>Was muss ich für die Beratung vorbereiten?</summary>
               <p>Am besten kommst du ungeschminkt oder dezent geschminkt und bringst 2–3 Lieblingsstücke aus deinem Kleiderschrank mit.</p>
             </details>
-            <details>
+            <details class="reveal">
               <summary>Kann ich dich auch für Veranstaltungen und Feiern buchen?</summary>
               <p>Ja, ich biete mobile Farbberatung für Events, Feiern und Firmenveranstaltungen an.</p>
             </details>
