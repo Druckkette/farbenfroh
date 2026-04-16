@@ -393,13 +393,45 @@
           <h2>Dein nächster Look<br>beginnt hier.</h2>
           <p>Buche dein unverbindliches Erstgespräch und starte mit mehr Stilklarheit.</p>
           <div class="cta-actions">
-            <a href="mailto:hello@farbenfroh.de" class="btn btn-pill btn--dark">Erstgespräch sichern</a>
+            <button type="button" class="btn btn-pill btn--dark" id="open-contact-modal">Erstgespräch sichern</button>
             <a href="#pricing" class="btn btn-pill btn--ghost-light">Gutschein kaufen</a>
           </div>
         </div>
       </section>
 
     </main>
+
+    <!-- CONTACT MODAL -->
+    <div class="modal" id="contact-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+        <button type="button" class="modal-close" aria-label="Kontaktformular schließen" data-close-modal>×</button>
+        <h3 id="contact-modal-title">Erstgespräch anfragen</h3>
+        <p>Fülle kurz das Formular aus – ich melde mich zeitnah bei dir.</p>
+
+        <form class="contact-form" id="contact-form">
+          <label for="contact-name">Name*</label>
+          <input id="contact-name" name="name" type="text" required />
+
+          <label for="contact-email">E-Mail*</label>
+          <input id="contact-email" name="email" type="email" required />
+
+          <label for="contact-phone">Telefon</label>
+          <input id="contact-phone" name="phone" type="tel" />
+
+          <label for="contact-message">Nachricht*</label>
+          <textarea id="contact-message" name="message" rows="4" required></textarea>
+
+          <label class="checkbox-row">
+            <input type="checkbox" name="consent" required />
+            <span>Ich stimme der Verarbeitung meiner Daten gemäß Datenschutzerklärung zu.</span>
+          </label>
+
+          <button type="submit" class="btn btn-pill btn--dark">Absenden</button>
+          <p class="contact-success" id="contact-success" hidden>Danke! Deine Anfrage wurde erfolgreich gesendet.</p>
+        </form>
+      </section>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -441,9 +473,9 @@
       <div class="wrap footer-bottom">
         <small>© 2026 Farbenfroh</small>
         <div class="legal">
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
-          <a href="#">AGB</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
         </div>
       </div>
     </footer>

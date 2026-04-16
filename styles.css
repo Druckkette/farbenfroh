@@ -1128,6 +1128,127 @@ details p {
   margin-top: 0.5rem;
 }
 
+/* ── CONTACT MODAL ───────────────────────── */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  z-index: 500;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 16, 19, 0.64);
+  backdrop-filter: blur(3px);
+}
+
+.modal-card {
+  position: relative;
+  width: min(620px, 100%);
+  background: var(--cream);
+  border: 1px solid rgba(42,31,36,0.12);
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  padding: clamp(1.25rem, 4vw, 2rem);
+  z-index: 1;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.modal-card h3 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.modal-card > p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0.7rem;
+  top: 0.7rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(42,31,36,0.12);
+  background: var(--white);
+  color: var(--plum);
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.contact-form label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--plum);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid rgba(42,31,36,0.15);
+  border-radius: 12px;
+  background: var(--white);
+  padding: 0.72rem 0.85rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--plum);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(212, 121, 106, 0.28);
+  border-color: var(--accent);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0.35rem 0 0.25rem;
+}
+
+.checkbox-row input {
+  margin-top: 0.22rem;
+}
+
+.checkbox-row span {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.contact-success {
+  margin-top: 0.15rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  background: rgba(72, 158, 101, 0.12);
+  color: #27643f;
+  font-size: 0.86rem;
+}
+
 /* ── FOOTER ──────────────────────────────── */
 .footer {
   background: #201619;

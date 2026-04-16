@@ -78,6 +78,47 @@ document.querySelectorAll('.flip-card').forEach(card => {
   });
 });
 
+// ── Kontakt-Modal ──────────────────────────
+const contactModal = document.getElementById('contact-modal');
+const openContactModalBtn = document.getElementById('open-contact-modal');
+const closeModalEls = document.querySelectorAll('[data-close-modal]');
+const contactForm = document.getElementById('contact-form');
+const contactSuccess = document.getElementById('contact-success');
+
+const openContactModal = () => {
+  if (!contactModal) return;
+  contactSuccess?.setAttribute('hidden', '');
+  contactModal.classList.add('is-open');
+  contactModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+};
+
+const closeContactModal = () => {
+  if (!contactModal) return;
+  contactModal.classList.remove('is-open');
+  contactModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+};
+
+openContactModalBtn?.addEventListener('click', openContactModal);
+closeModalEls.forEach(el => el.addEventListener('click', closeContactModal));
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && contactModal?.classList.contains('is-open')) {
+    closeContactModal();
+  }
+});
+
+contactForm?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (!contactForm.checkValidity()) {
+    contactForm.reportValidity();
+    return;
+  }
+  contactSuccess?.removeAttribute('hidden');
+  contactForm.reset();
+});
+
 // ── Newsletter ─────────────────────────────
 document.querySelector('.newsletter-form')?.addEventListener('submit', e => {
   e.preventDefault();
