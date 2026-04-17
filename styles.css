@@ -250,15 +250,15 @@ p { margin: 0; }
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 200;
-  background: var(--cream);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 rgba(42,31,36,0.08);
-  transition: background 250ms ease, box-shadow 250ms ease;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  transition: background 250ms ease, box-shadow 250ms ease, backdrop-filter 250ms ease;
 }
 
 .header.scrolled {
-  background: var(--cream);
+  background: rgba(250, 247, 244, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 rgba(42,31,36,0.08);
@@ -1389,14 +1389,17 @@ details p {
 
 @media (max-width: 680px) {
   .header {
-    background: var(--cream);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: var(--white);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     box-shadow: 0 1px 0 rgba(42,31,36,0.08);
   }
 
   .header.scrolled {
-    background: var(--cream);
+    background: var(--white);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: 0 1px 0 rgba(42,31,36,0.08);
   }
 
   .nav, .header .btn-pill { display: none; }
