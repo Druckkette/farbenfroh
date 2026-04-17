@@ -259,7 +259,9 @@ p { margin: 0; }
 
 .header.scrolled {
   background: var(--cream);
-  box-shadow: 0 10px 30px rgba(42,31,36,0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(42,31,36,0.08);
 }
 
 .header-inner {
@@ -1386,6 +1388,17 @@ details p {
 }
 
 @media (max-width: 680px) {
+  .header {
+    background: var(--cream);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 1px 0 rgba(42,31,36,0.08);
+  }
+
+  .header.scrolled {
+    background: var(--cream);
+  }
+
   .nav, .header .btn-pill { display: none; }
 
   .burger {
