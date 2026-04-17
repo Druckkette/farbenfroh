@@ -250,6 +250,10 @@ p { margin: 0; }
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 200;
+  background: var(--cream);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(42,31,36,0.08);
   transition: background 250ms ease, box-shadow 250ms ease;
 }
 
