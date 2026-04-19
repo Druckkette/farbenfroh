@@ -2,13 +2,8 @@
 // FARBENFROH v4 – script.js
 // =============================================
 
-// ── Globale Referenzen ─────────────────────
-const header     = document.querySelector('.header');
-const burger     = document.querySelector('.burger');
-const nav        = document.querySelector('.nav');
-const mobileMenu = document.getElementById('mobile-menu');
-
 // ── Instant anchor scroll (kein smooth) ────
+// Überschreibt browser-default scroll-behavior für alle internen Links
 document.addEventListener('click', (e) => {
   const link = e.target.closest('a[href^="#"]');
   if (!link) return;
@@ -19,15 +14,13 @@ document.addEventListener('click', (e) => {
   e.preventDefault();
   target.scrollIntoView({ behavior: 'instant', block: 'start' });
   // Mobilmenü schließen falls offen
-  if (mobileMenu) {
-    mobileMenu.classList.remove('is-open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-  }
+  nav?.classList.remove('open');
   burger?.setAttribute('aria-expanded', 'false');
   document.body.classList.remove('menu-open');
 });
 
 // ── Header scroll ─────────────────────────
+const header = document.querySelector('.header');
 const showHeaderAfter = 90;
 
 const syncHeaderState = () => {
@@ -41,31 +34,27 @@ window.addEventListener('scroll', syncHeaderState, { passive: true });
 syncHeaderState();
 
 // ── Mobile Burger Menu ─────────────────────
-if (burger && mobileMenu) {
+const burger = document.querySelector('.burger');
+const nav    = document.querySelector('.nav');
+
+if (burger && nav) {
   const closeMenu = () => {
-    mobileMenu.classList.remove('is-open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
+    nav.classList.remove('open');
     burger.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('menu-open');
   };
 
   burger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('is-open');
-    mobileMenu.setAttribute('aria-hidden', String(!open));
+    const open = nav.classList.toggle('open');
     burger.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('menu-open', open);
   });
 
-  // Links im Overlay schließen das Menü
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!header?.contains(e.target)) {
       closeMenu();
-    });
-  });
-
-  // Klick außerhalb (auf den Overlay-Hintergrund selbst)
-  mobileMenu.addEventListener('click', (e) => {
-    if (e.target === mobileMenu) closeMenu();
+    }
   });
 
   document.addEventListener('keydown', (e) => {
