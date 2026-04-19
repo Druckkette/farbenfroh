@@ -1404,6 +1404,11 @@ details p {
   .footer-inner      { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Mobiles Overlay-Menü (direkt am body) ── */
+.mobile-menu {
+  display: none;
+}
+
 @media (max-width: 680px) {
   body.menu-open { overflow: hidden; }
 
@@ -1420,6 +1425,7 @@ details p {
 
   .hero { padding-top: 80px; }
 
+  /* Desktop-Nav + CTA ausblenden, Burger zeigen */
   .nav, .header .btn-pill { display: none; }
 
   .burger {
@@ -1428,36 +1434,40 @@ details p {
     z-index: 205;
   }
 
-  /* ── Vollbild-Menü ──
-     Das ::before übernimmt backdrop-filter alleine –
-     das ist der einzige zuverlässige Weg auf iOS Safari & Android Chrome.
-     Das Element selbst bleibt transparent, nur das Pseudo-Element blurt. */
-  .nav.open {
+  /* ── Vollbild Frosted-Glass Overlay ──
+     Liegt direkt am <body> – kein Elternelement blockiert backdrop-filter */
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 202;
+    /* Versteckt per default */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 280ms cubic-bezier(0.22,1,0.36,1);
+    /* Frosted Glass – kein Elternelement kann es blockieren */
+    background: rgba(250, 247, 244, 0.75);
+    -webkit-backdrop-filter: saturate(180%) blur(24px);
+    backdrop-filter: saturate(180%) blur(24px);
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-nav {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
-    position: fixed;
-    inset: 0;
-    background: transparent;
     padding: 5rem 2rem 3rem;
-    z-index: 202;
-    animation: menuFadeIn 280ms cubic-bezier(0.22,1,0.36,1) both;
   }
 
-  /* Frosted-Glass-Schicht als Pseudo-Element */
-  .nav.open::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: rgba(250, 247, 244, 0.78);
-    -webkit-backdrop-filter: saturate(180%) blur(22px);
-    backdrop-filter: saturate(180%) blur(22px);
-  }
-
-  .nav.open a {
+  .mobile-menu-nav a {
+    display: block;
     padding: 0.55rem 0;
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
@@ -1465,26 +1475,11 @@ details p {
     color: var(--plum);
     letter-spacing: 0.01em;
     text-align: center;
-    border-bottom: none;
-    position: relative;
-    z-index: 1;
+    text-decoration: none;
+    transition: color 180ms ease;
   }
 
-  .nav.open a:hover { color: var(--accent); }
-
-  .nav.open a::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    width: 0;
-    height: 1.5px;
-    background: var(--accent);
-    transform: translateX(-50%);
-    transition: width 220ms ease;
-  }
-
-  .nav.open a:hover::after { width: 60%; }
+  .mobile-menu-nav a:hover { color: var(--accent); }
 
   .features-grid { grid-template-columns: 1fr; }
   .flip-grid     { grid-template-columns: 1fr; }
