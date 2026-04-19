@@ -26,7 +26,8 @@ const showHeaderAfter = 90;
 const syncHeaderState = () => {
   if (!header) return;
   const passedThreshold = window.scrollY > showHeaderAfter;
-  header.classList.toggle('is-visible', passedThreshold);
+  const menuOpen = document.body.classList.contains('menu-open');
+  header.classList.toggle('is-visible', passedThreshold || menuOpen);
   header.classList.toggle('scrolled', passedThreshold);
 };
 
@@ -42,12 +43,14 @@ if (burger && nav) {
     nav.classList.remove('open');
     burger.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('menu-open');
+    syncHeaderState();
   };
 
   burger.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
     burger.setAttribute('aria-expanded', String(open));
     document.body.classList.toggle('menu-open', open);
+    syncHeaderState();
   });
 
   // Close on outside click
