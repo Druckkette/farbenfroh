@@ -253,16 +253,16 @@ p { margin: 0; }
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
-  background: rgba(250, 247, 244, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 rgba(42,31,36,0.10);
+  background: rgba(250, 247, 244, 0.75);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  box-shadow: 0 1px 0 rgba(42,31,36,0.10), 0 4px 24px rgba(42,31,36,0.07);
   transition: background 250ms ease, box-shadow 250ms ease;
 }
 
 .header.scrolled {
-  background: rgba(250, 247, 244, 0.97);
-  box-shadow: 0 1px 0 rgba(42,31,36,0.16);
+  background: rgba(250, 247, 244, 0.88);
+  box-shadow: 0 1px 0 rgba(42,31,36,0.16), 0 4px 24px rgba(42,31,36,0.10);
 }
 
 .header-inner {
@@ -284,13 +284,13 @@ p { margin: 0; }
 }
 
 .logo-diamant {
-  height: 28px;
+  height: 36px;
   width: auto;
   flex-shrink: 0;
 }
 
 .logo-schrift {
-  height: 18px;
+  height: 24px;
   width: auto;
 }
 
@@ -1416,12 +1416,12 @@ details p {
 @media (max-width: 680px) {
   body.menu-open { overflow: hidden; }
 
-  /* Header auf Mobil immer sichtbar und weiß */
+  /* Header auf Mobil immer sichtbar */
   .header {
-    background: var(--white) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    box-shadow: 0 1px 0 rgba(42,31,36,0.08) !important;
+    background: rgba(250, 247, 244, 0.75) !important;
+    backdrop-filter: blur(20px) saturate(1.4) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.4) !important;
+    box-shadow: 0 1px 0 rgba(42,31,36,0.08), 0 4px 24px rgba(42,31,36,0.07) !important;
     transform: none !important;
     opacity: 1 !important;
     pointer-events: auto !important;
