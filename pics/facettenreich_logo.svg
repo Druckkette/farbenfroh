@@ -1,69 +1,37 @@
 <svg width="680" height="420" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg">
   <title>Facettenreich – Farb- und Stilberatung</title>
 
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Raleway:wght@300&display=swap');
-      .brand-name {
-        font-family: 'Cormorant Garamond', Georgia, serif;
-        font-size: 52px;
-        font-weight: 300;
-        letter-spacing: 0.12em;
-        fill: #4a3228;
-      }
-      .brand-name-italic {
-        font-family: 'Cormorant Garamond', Georgia, serif;
-        font-style: italic;
-        font-size: 52px;
-        font-weight: 300;
-        letter-spacing: 0.12em;
-        fill: #c97a6e;
-      }
-      .tagline {
-        font-family: 'Raleway', Arial, sans-serif;
-        font-size: 12px;
-        font-weight: 300;
-        letter-spacing: 0.38em;
-        fill: #9a7065;
-      }
-    </style>
-  </defs>
-
   <!-- Top crown facets -->
   <polygon points="340,58 315,92 365,92" fill="#f2c4b8" opacity="0.95"/>
   <polygon points="315,92 285,78 300,110" fill="#e8a090" opacity="0.9"/>
   <polygon points="365,92 395,78 380,110" fill="#d4806e" opacity="0.88"/>
   <polygon points="285,78 265,98 300,110" fill="#f0d0c4" opacity="0.85"/>
   <polygon points="395,78 415,98 380,110" fill="#c96e5a" opacity="0.82"/>
-
-  <!-- Girdle -->
   <polygon points="265,98 300,110 290,145" fill="#e8b0a0" opacity="0.9"/>
   <polygon points="300,110 315,92 320,138" fill="#f5cfc4" opacity="0.92"/>
   <polygon points="315,92 340,58 340,125" fill="#fce8e2" opacity="0.88"/>
   <polygon points="340,58 365,92 340,125" fill="#f2c4b8" opacity="0.85"/>
   <polygon points="365,92 380,110 360,138" fill="#e09080" opacity="0.9"/>
   <polygon points="380,110 415,98 390,145" fill="#d07868" opacity="0.88"/>
-
-  <!-- Pavilion -->
   <polygon points="265,98 290,145 305,170" fill="#c8806e" opacity="0.85"/>
   <polygon points="290,145 320,138 315,178" fill="#e0a090" opacity="0.9"/>
   <polygon points="320,138 340,125 340,185" fill="#f0c8bc" opacity="0.88"/>
   <polygon points="340,125 360,138 340,185" fill="#e8b0a0" opacity="0.86"/>
   <polygon points="360,138 390,145 365,170" fill="#c87060" opacity="0.85"/>
   <polygon points="390,145 415,98 375,170" fill="#b86050" opacity="0.82"/>
-
-  <!-- Culet -->
   <polygon points="305,170 315,178 340,210" fill="#c06858" opacity="0.88"/>
   <polygon points="315,178 340,185 340,210" fill="#d88070" opacity="0.9"/>
   <polygon points="340,185 365,170 340,210" fill="#c87868" opacity="0.87"/>
   <polygon points="365,170 375,170 340,210" fill="#b86858" opacity="0.84"/>
-
-  <!-- Outlines -->
   <polyline points="340,58 285,78 265,98 290,145 305,170 340,210 375,170 390,145 415,98 395,78 340,58" fill="none" stroke="#c8786a" stroke-width="0.4" opacity="0.6"/>
   <line x1="265" y1="98" x2="415" y2="98" stroke="#c8786a" stroke-width="0.3" opacity="0.4"/>
 
-  <!-- Brand name -->
-  <text x="340" y="262" text-anchor="middle" class="brand-name">Facetten<tspan class="brand-name-italic">reich</tspan></text>
+  <!-- Brand name: single text element with two tspans, centered as a whole -->
+  <text text-anchor="middle" x="340" y="262"
+        font-family="'Cormorant Garamond', 'Garamond', 'Georgia', serif"
+        font-size="52" font-weight="300" letter-spacing="6">
+    <tspan fill="#4a3228">Facetten</tspan><tspan fill="#c97a6e" font-style="italic">reich</tspan>
+  </text>
 
   <!-- Divider -->
   <line x1="175" y1="278" x2="505" y2="278" stroke="#d4a89a" stroke-width="0.5"/>
@@ -71,6 +39,8 @@
   <polygon points="504,278 510,274 516,278 510,282" fill="#d4806e" opacity="0.7"/>
 
   <!-- Tagline -->
-  <text x="340" y="302" text-anchor="middle" class="tagline">FARB- UND STILBERATUNG</text>
+  <text x="340" y="302" text-anchor="middle"
+        font-family="'Raleway', 'Gill Sans', 'Trebuchet MS', sans-serif"
+        font-size="11" font-weight="300" letter-spacing="5" fill="#9a7065">FARB- UND STILBERATUNG</text>
 
 </svg>
