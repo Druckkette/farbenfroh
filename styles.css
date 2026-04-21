@@ -284,18 +284,18 @@ p { margin: 0; }
 }
 
 .logo-diamant {
-  height: 36px;
+  height: 48px;
   width: auto;
   flex-shrink: 0;
 }
 
 .logo-schrift {
-  height: 24px;
+  height: 32px;
   width: auto;
 }
 
 .footer-logo-img {
-  height: 44px;
+  height: 60px;
   width: auto;
   display: block;
 }
