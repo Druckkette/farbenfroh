@@ -1,0 +1,40 @@
+<svg width="680" height="120" viewBox="0 0 680 120" xmlns="http://www.w3.org/2000/svg">
+  <title>Facettenreich – Schriftzug</title>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Raleway:wght@300&display=swap');
+      .brand-name {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 52px;
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        fill: #4a3228;
+      }
+      .brand-name-italic {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-style: italic;
+        font-size: 52px;
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        fill: #c97a6e;
+      }
+      .tagline {
+        font-family: 'Raleway', Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.38em;
+        fill: #9a7065;
+      }
+    </style>
+  </defs>
+
+  <text x="340" y="58" text-anchor="middle" class="brand-name">Facetten<tspan class="brand-name-italic">reich</tspan></text>
+
+  <line x1="175" y1="74" x2="505" y2="74" stroke="#d4a89a" stroke-width="0.5"/>
+  <polygon points="164,74 170,70 176,74 170,78" fill="#d4806e" opacity="0.7"/>
+  <polygon points="504,74 510,70 516,74 510,78" fill="#d4806e" opacity="0.7"/>
+
+  <text x="340" y="98" text-anchor="middle" class="tagline">FARB- UND STILBERATUNG</text>
+
+</svg>
