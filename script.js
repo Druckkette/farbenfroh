@@ -1,5 +1,5 @@
 // =============================================
-// FARBENFROH v4 – script.js
+// FACETTENREICH v4 – script.js
 // =============================================
 
 // ── Instant anchor scroll (kein smooth) ────
