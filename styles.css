@@ -1393,7 +1393,9 @@ details p {
   .hero-inner        { grid-template-columns: 1fr; gap: 3rem; }
   .hero-visual       { display: none; }
   .about-grid        { grid-template-columns: 1fr; gap: 3rem; }
-  .about-photo       { display: none; }
+  .about-photo       { display: block; max-width: 220px; margin: 0 auto; }
+  .about-photo .photo-deco,
+  .about-photo .about-stat-card { display: none; }
   .features-grid     { grid-template-columns: repeat(2, 1fr); }
   .flip-grid         { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid      { grid-template-columns: 1fr; }
@@ -1418,6 +1420,7 @@ details p {
   }
 
   .hero { padding-top: 80px; }
+  .about-photo { max-width: 160px; }
 
   .nav, .header .btn-pill { display: none; }
 
