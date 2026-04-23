@@ -540,21 +540,11 @@ p { margin: 0; }
   background: var(--rose);
 }
 
-.photo-placeholder {
-  width: 100%; height: 100%;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(155deg, #f0cbc4 0%, #dce4ee 100%);
-}
-
-.photo-placeholder span {
-  background: rgba(255,255,255,0.65);
-  backdrop-filter: blur(4px);
-  padding: 0.5rem 1.2rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-weight: 500;
+.about-photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .photo-deco {
@@ -1403,7 +1393,9 @@ details p {
   .hero-inner        { grid-template-columns: 1fr; gap: 3rem; }
   .hero-visual       { display: none; }
   .about-grid        { grid-template-columns: 1fr; gap: 3rem; }
-  .about-photo       { display: none; }
+  .about-photo       { display: block; max-width: 220px; margin: 0 auto; }
+  .about-photo .photo-deco,
+  .about-photo .about-stat-card { display: none; }
   .features-grid     { grid-template-columns: repeat(2, 1fr); }
   .flip-grid         { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid      { grid-template-columns: 1fr; }
@@ -1428,6 +1420,7 @@ details p {
   }
 
   .hero { padding-top: 80px; }
+  .about-photo { max-width: 160px; }
 
   .nav, .header .btn-pill { display: none; }
 
