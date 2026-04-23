@@ -540,21 +540,11 @@ p { margin: 0; }
   background: var(--rose);
 }
 
-.photo-placeholder {
-  width: 100%; height: 100%;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(155deg, #f0cbc4 0%, #dce4ee 100%);
-}
-
-.photo-placeholder span {
-  background: rgba(255,255,255,0.65);
-  backdrop-filter: blur(4px);
-  padding: 0.5rem 1.2rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-weight: 500;
+.about-photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .photo-deco {
