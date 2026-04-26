@@ -2,17 +2,33 @@
 // FACETTENREICH v4 – script.js
 // =============================================
 
-// ── Instant anchor scroll (kein smooth) ────
+// ── Anchor smooth scroll ───────────────────
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const resolveTopTarget = () =>
+  document.getElementById('top') ||
+  document.querySelector('.hero') ||
+  document.querySelector('main') ||
+  document.body;
+
+const smoothScrollToTarget = (target) => {
+  if (!target) return;
+  if (target === document.body || target === document.documentElement) {
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    return;
+  }
+  target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+};
+
 // Überschreibt browser-default scroll-behavior für alle internen Links
 document.addEventListener('click', (e) => {
   const link = e.target.closest('a[href^="#"]');
   if (!link) return;
   const id = link.getAttribute('href').slice(1);
-  if (!id) return;
-  const target = document.getElementById(id);
-  if (!target) return;
+  const target = id ? document.getElementById(id) : resolveTopTarget();
+  if (!target && id !== 'top') return;
   e.preventDefault();
-  target.scrollIntoView({ behavior: 'instant', block: 'start' });
+  smoothScrollToTarget(target || resolveTopTarget());
   // Mobilmenü schließen falls offen
   nav?.classList.remove('open');
   burger?.setAttribute('aria-expanded', 'false');
@@ -146,3 +162,18 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', e => {
   if (btn)   { btn.textContent = '✓'; btn.disabled = true; }
   if (input) { input.value = ''; input.placeholder = 'Eingetragen ✨'; }
 });
+
+// ── Back-to-top Button ─────────────────────
+const backToTop = document.getElementById('back-to-top');
+
+const syncBackToTopVisibility = () => {
+  if (!backToTop) return;
+  backToTop.classList.toggle('is-visible', window.scrollY > 320);
+};
+
+backToTop?.addEventListener('click', () => {
+  smoothScrollToTarget(resolveTopTarget());
+});
+
+window.addEventListener('scroll', syncBackToTopVisibility, { passive: true });
+syncBackToTopVisibility();
