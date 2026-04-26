@@ -5,11 +5,7 @@
 // ── Anchor smooth scroll ───────────────────
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const resolveTopTarget = () =>
-  document.getElementById('top') ||
-  document.querySelector('.hero') ||
-  document.querySelector('main') ||
-  document.body;
+const resolveTopTarget = () => document.documentElement;
 
 const smoothScrollToTarget = (target) => {
   if (!target) return;
@@ -25,10 +21,20 @@ document.addEventListener('click', (e) => {
   const link = e.target.closest('a[href^="#"]');
   if (!link) return;
   const id = link.getAttribute('href').slice(1);
+
+  if (id === 'top') {
+    e.preventDefault();
+    smoothScrollToTarget(resolveTopTarget());
+    nav?.classList.remove('open');
+    burger?.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+    return;
+  }
+
   const target = id ? document.getElementById(id) : resolveTopTarget();
-  if (!target && id !== 'top') return;
+  if (!target) return;
   e.preventDefault();
-  smoothScrollToTarget(target || resolveTopTarget());
+  smoothScrollToTarget(target);
   // Mobilmenü schließen falls offen
   nav?.classList.remove('open');
   burger?.setAttribute('aria-expanded', 'false');
