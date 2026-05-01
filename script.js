@@ -126,6 +126,39 @@ const closeModalEls = document.querySelectorAll('[data-close-modal]');
 const contactForm = document.getElementById('contact-form');
 const contactSuccess = document.getElementById('contact-success');
 
+// ── Mobile WhatsApp CTA ───────────────────
+const whatsappNumber = '4915678308103';
+const whatsappText = encodeURIComponent('Hallo, ich möchte einen Termin vereinbaren.');
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+const mobileBreakpoint = window.matchMedia('(max-width: 680px)');
+const contactNavLink = document.getElementById('contact-nav-link');
+
+const syncMobileWhatsAppCTA = () => {
+  const isMobile = mobileBreakpoint.matches;
+
+  if (contactNavLink) {
+    contactNavLink.textContent = isMobile
+      ? 'Schreibe mir einfach bei WhatsApp'
+      : 'Termin vereinbaren';
+  }
+
+  if (!openContactModalBtn) return;
+
+  if (isMobile) {
+    openContactModalBtn.textContent = openContactModalBtn.dataset.mobileLabel || 'Schreibe mir einfach bei WhatsApp';
+    openContactModalBtn.setAttribute('aria-label', 'WhatsApp öffnen, um direkt eine Nachricht zu senden');
+    openContactModalBtn.onclick = () => {
+      window.open(whatsappUrl, '_blank', 'noopener');
+    };
+    return;
+  }
+
+  openContactModalBtn.textContent = 'Erstgespräch sichern';
+  openContactModalBtn.removeAttribute('aria-label');
+  openContactModalBtn.onclick = null;
+};
+
+
 const openContactModal = () => {
   if (!contactModal) return;
   contactSuccess?.setAttribute('hidden', '');
@@ -141,7 +174,13 @@ const closeContactModal = () => {
   document.body.style.overflow = '';
 };
 
-openContactModalBtn?.addEventListener('click', openContactModal);
+openContactModalBtn?.addEventListener('click', () => {
+  if (mobileBreakpoint.matches) return;
+  openContactModal();
+});
+
+syncMobileWhatsAppCTA();
+mobileBreakpoint.addEventListener('change', syncMobileWhatsAppCTA);
 closeModalEls.forEach(el => el.addEventListener('click', closeContactModal));
 
 document.addEventListener('keydown', (e) => {
