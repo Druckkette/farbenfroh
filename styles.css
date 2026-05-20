@@ -776,6 +776,7 @@ p { margin: 0; }
 /* BACK – Details */
 .flip-back {
   background: var(--back-hue, var(--plum));
+  color: white;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
