@@ -100,7 +100,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // ── Flip Cards ─────────────────────────────
 document.querySelectorAll('.flip-card').forEach(card => {
   card.addEventListener('click', (e) => {
-    // Klick auf Button (Jetzt buchen / Anfragen) – nicht flippen, Link folgen
+    // Klick auf Button (Anfragen) – nicht flippen
     if (e.target.closest('.btn')) return;
     card.classList.toggle('is-flipped');
   });
@@ -109,6 +109,7 @@ document.querySelectorAll('.flip-card').forEach(card => {
   card.setAttribute('tabindex', '0');
   card.setAttribute('role', 'button');
   card.addEventListener('keydown', (e) => {
+    if (e.target.closest('.btn')) return;
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       card.classList.toggle('is-flipped');
@@ -128,7 +129,9 @@ const contactSuccess = document.getElementById('contact-success');
 
 // ── Mobile WhatsApp CTA ───────────────────
 const whatsappNumber = '4915678308103';
-const whatsappText = encodeURIComponent('Hallo, ich möchte einen Termin vereinbaren.');
+const phoneNumberDisplay = '+49 156 78308103';
+const defaultWhatsappText = 'Hallo, ich möchte einen Termin vereinbaren.';
+const whatsappText = encodeURIComponent(defaultWhatsappText);
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 const mobileBreakpoint = window.matchMedia('(max-width: 680px)');
 const contactNavLink = document.getElementById('contact-nav-link');
@@ -206,6 +209,81 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', e => {
   const input = e.target.querySelector('input');
   if (btn)   { btn.textContent = '✓'; btn.disabled = true; }
   if (input) { input.value = ''; input.placeholder = 'Eingetragen ✨'; }
+});
+
+// ── Anfrage-Modal (Paket → Kontaktart) ────
+const anfrageModal = document.getElementById('anfrage-modal');
+const anfragePaketName = document.getElementById('anfrage-paket-name');
+const anfragePhoneInfo = document.getElementById('anfrage-phone');
+const closeAnfrageEls = document.querySelectorAll('[data-close-anfrage]');
+let currentAnfragePackage = '';
+
+const openAnfrageModal = (paket) => {
+  if (!anfrageModal) return;
+  currentAnfragePackage = paket || '';
+  if (anfragePaketName) anfragePaketName.textContent = paket || 'das Paket';
+  anfragePhoneInfo?.setAttribute('hidden', '');
+  anfrageModal.classList.add('is-open');
+  anfrageModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+};
+
+const closeAnfrageModal = () => {
+  if (!anfrageModal) return;
+  anfrageModal.classList.remove('is-open');
+  anfrageModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+};
+
+const buildPackageWhatsappUrl = (paket) => {
+  const text = paket
+    ? `Hallo, ich interessiere mich für das Paket "${paket}" und würde gerne eine Anfrage stellen.`
+    : defaultWhatsappText;
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+};
+
+document.querySelectorAll('.flip-anfrage').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const paket = btn.dataset.package || '';
+    openAnfrageModal(paket);
+  });
+});
+
+closeAnfrageEls.forEach(el => el.addEventListener('click', closeAnfrageModal));
+
+document.querySelectorAll('.anfrage-option').forEach(opt => {
+  opt.addEventListener('click', () => {
+    const method = opt.dataset.anfrageMethod;
+    if (method === 'mail') {
+      closeAnfrageModal();
+      // kurz warten, damit der erste Modal-Übergang sauber abschließt
+      setTimeout(() => {
+        if (contactModal) {
+          contactSuccess?.setAttribute('hidden', '');
+          const messageField = document.getElementById('contact-message');
+          if (messageField && currentAnfragePackage && !messageField.value) {
+            messageField.value = `Ich interessiere mich für das Paket "${currentAnfragePackage}" und möchte gerne eine Anfrage stellen.`;
+          }
+          contactModal.classList.add('is-open');
+          contactModal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+      }, 180);
+    } else if (method === 'phone') {
+      anfragePhoneInfo?.removeAttribute('hidden');
+    } else if (method === 'whatsapp') {
+      const url = buildPackageWhatsappUrl(currentAnfragePackage);
+      window.open(url, '_blank', 'noopener');
+      closeAnfrageModal();
+    }
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && anfrageModal?.classList.contains('is-open')) {
+    closeAnfrageModal();
+  }
 });
 
 // ── Back-to-top Button ─────────────────────
