@@ -23,13 +23,12 @@
         <nav class="nav" id="nav">
           <a href="#about">Über mich</a>
           <a href="#features">Ablauf</a>
-          <a href="#services">Leistungen</a>
-          <a href="#reviews">Bewertungen</a>
-          <a href="#pricing">Pakete</a>
-          <a href="#contact" id="contact-nav-link">Termin vereinbaren</a>
+          <a href="#services">Pakete</a>
+          <a href="#reviews">Kundenstimmen</a>
           <a href="#faq">FAQ</a>
+          <a href="#contact" id="contact-nav-link">Termin vereinbaren</a>
         </nav>
-        <a href="#contact" class="btn btn-pill">Termin buchen</a>
+        <a href="#contact" class="btn btn-pill header-cta">Termin buchen</a>
       </div>
     </header>
 
@@ -45,7 +44,7 @@
             <h1>Deine Farben.<br><em>Deine Ausstrahlung.</em></h1>
             <p>Von der Typanalyse bis zur Capsule-Wardrobe – ich übersetze Farbharmonie in klare Empfehlungen für deinen Alltag.</p>
             <div class="hero-actions">
-              <a href="#pricing" class="btn btn-pill btn--dark">Farbprofil buchen</a>
+              <a href="#services" class="btn btn-pill btn--dark">Farbprofil buchen</a>
               <a href="#services" class="btn btn-text">Mehr erfahren ↓</a>
             </div>
             <div class="hero-social-proof">
@@ -108,216 +107,271 @@
         <div class="wrap">
           <div class="section-head reveal">
             <span class="tag tag--muted">Ablauf</span>
-            <h2>So läuft deine<br>Beratung ab.</h2>
+            <h2>Wie läuft die<br>Beratung ab?</h2>
           </div>
-          <div class="features-grid">
-            <article class="feat-card reveal">
-              <div class="feat-img">
-                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Farbanalyse" loading="lazy" />
+          <ol class="ablauf-list reveal">
+            <li class="ablauf-item">
+              <span class="ablauf-num">01</span>
+              <div class="ablauf-text">
+                <h3>Erstgespräch & Wünsche</h3>
+                <p>Wir besprechen deine Ziele, Anlässe und Vorlieben – damit die Beratung genau zu dir passt.</p>
               </div>
-              <h3>Persönlicher Farbtyp</h3>
-              <p>Präzise Auswertung von Unterton, Kontrast und Farbintensität inklusive Farbkarte.</p>
-            </article>
-            <article class="feat-card reveal reveal--delay">
-              <div class="feat-img">
-                <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80" alt="Outfit-System" loading="lazy" />
+            </li>
+            <li class="ablauf-item">
+              <span class="ablauf-num">02</span>
+              <div class="ablauf-text">
+                <h3>Persönliche Farbanalyse</h3>
+                <p>Präzise Auswertung von Unterton, Kontrast und Farbintensität – inklusive deiner persönlichen Farbkarte.</p>
               </div>
-              <h3>Outfit-System</h3>
-              <p>Wir zeigen dir, welche Farben sich in deiner Garderobe mühelos kombinieren lassen.</p>
-            </article>
-            <article class="feat-card reveal reveal--delay2">
-              <div class="feat-img">
-                <img src="pics/einkaufsberatung.png" alt="Shopping-Guide" loading="lazy" />
+            </li>
+            <li class="ablauf-item">
+              <span class="ablauf-num">03</span>
+              <div class="ablauf-text">
+                <h3>Outfit- & Stilberatung</h3>
+                <p>Du erfährst, welche Farben, Schnitte und Materialien dich perfekt in Szene setzen.</p>
               </div>
-              <h3>Shopping-Guide</h3>
-              <p>Konkrete Hinweise für Stoffe, Accessoires und Lieblingspieces ohne Fehlkäufe.</p>
-            </article>
-            <article class="feat-card reveal reveal--delay3">
-              <div class="feat-img">
-                <img src="pics/call.png" alt="Follo-Up-Call" loading="lazy" />              
+            </li>
+            <li class="ablauf-item">
+              <span class="ablauf-num">04</span>
+              <div class="ablauf-text">
+                <h3>Shopping-Guide</h3>
+                <p>Konkrete Hinweise für Stoffe, Accessoires und Lieblingsstücke – ohne Fehlkäufe.</p>
               </div>
-              <h3>Follow-up Call</h3>
-              <p>Nach der Beratung klären wir offene Fragen und optimieren bestehende Looks.</p>
-            </article>
-          </div>
+            </li>
+            <li class="ablauf-item">
+              <span class="ablauf-num">05</span>
+              <div class="ablauf-text">
+                <h3>Follow-up Call</h3>
+                <p>Nach der Beratung klären wir offene Fragen und optimieren bestehende Looks gemeinsam.</p>
+              </div>
+            </li>
+          </ol>
         </div>
       </section>
 
-      <!-- ANGEBOT (vorher: services) -->
+      <!-- PAKETE (vorher: Angebot) -->
       <section class="section services" id="services">
         <div class="wrap">
           <div class="section-head reveal">
-            <span class="tag tag--muted">Angebot</span>
+            <span class="tag tag--muted">Pakete</span>
             <h2>Das passende Paket<br>für jeden Anlass.</h2>
           </div>
           <div class="flip-grid reveal">
 
             <!-- Farbberatung -->
-            <div class="flip-card">
+            <div class="flip-card" data-package="Farbberatung">
               <div class="flip-inner">
-                <div class="flip-front" style="--card-bg: url('/pics/header.png')">
-                  <div class="flip-front-overlay">
+                <div class="flip-front">
+                  <div class="flip-front-content">
                     <h3>Farbberatung</h3>
-                    <p>Lerne, welche Farben dich strahlen lassen.</p>
-                    <span class="flip-hint">Klicken für Details →</span>
+                    <p class="flip-front-tagline">Lerne, welche Farben dich strahlen lassen.</p>
+                    <ul class="flip-front-list">
+                      <li>Professionelle Farbtyp-Analyse</li>
+                      <li>Klares Farbsystem für den Alltag</li>
+                      <li>Farbpass inklusive</li>
+                    </ul>
+                    <span class="flip-hint">Klicken für Info →</span>
                   </div>
                 </div>
-                <div class="flip-back" style="--back-hue: var(--plum)">
+                <div class="flip-back">
+                  <h3 class="flip-back-title">Farbberatung</h3>
                   <p class="flip-back-desc">Bei der Farbberatung wird dein Farbtyp analysiert und ich zeige dir, welche Töne dich strahlen lassen. Du gehst mit einem klaren Farbsystem und deinem Farbpass nach Hause, sodass du deine Erkenntnisse sofort im Alltag anwenden kannst.</p>
                   <div class="flip-back-meta">
                     <span class="flip-back-price">250€</span>
                     <span class="flip-back-duration">90–120 Min. · inkl. Farbpass</span>
                   </div>
-                  <a href="#contact" class="btn btn-pill btn--accent">Jetzt buchen</a>
+                  <button type="button" class="btn btn-pill btn--accent flip-anfrage" data-package="Farbberatung">Anfragen</button>
                 </div>
               </div>
             </div>
 
             <!-- Stilberatung -->
-            <div class="flip-card">
+            <div class="flip-card" data-package="Stilberatung">
               <div class="flip-inner">
-                <div class="flip-front" style="--card-bg: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80')">
-                  <div class="flip-front-overlay">
+                <div class="flip-front">
+                  <div class="flip-front-content">
                     <h3>Stilberatung</h3>
-                    <p>Lerne deinen perfekten Stil kennen.</p>
-                    <span class="flip-hint">Klicken für Details →</span>
+                    <p class="flip-front-tagline">Lerne deinen perfekten Stil kennen.</p>
+                    <ul class="flip-front-list">
+                      <li>Figur- & Proportionsanalyse</li>
+                      <li>Materialkunde & Stilrichtung</li>
+                      <li>Klare Stilidentität</li>
+                    </ul>
+                    <span class="flip-hint">Klicken für Info →</span>
                   </div>
                 </div>
-                <div class="flip-back" style="--back-hue: var(--plum-2)">
+                <div class="flip-back">
+                  <h3 class="flip-back-title">Stilberatung</h3>
                   <p class="flip-back-desc">Wir verbinden Figur, Proportionen, Materialien und Stilrichtung zu einem stimmigen Gesamtbild. Das Ergebnis ist eine klare Stilidentität, die du im Alltag sofort nutzen kannst.</p>
                   <div class="flip-back-meta">
                     <span class="flip-back-price">230€</span>
                     <span class="flip-back-duration">90–120 Min. · inkl. persönlicher Stilguide</span>
                   </div>
-                  <a href="#contact" class="btn btn-pill btn--accent">Jetzt buchen</a>
+                  <button type="button" class="btn btn-pill btn--accent flip-anfrage" data-package="Stilberatung">Anfragen</button>
                 </div>
               </div>
             </div>
 
             <!-- Farb- und Stilberatung -->
-            <div class="flip-card">
+            <div class="flip-card" data-package="Farb- & Stilberatung">
               <div class="flip-inner">
-                <div class="flip-front" style="--card-bg: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80')">
-                  <div class="flip-front-overlay">
+                <div class="flip-front flip-front--featured">
+                  <div class="flip-front-content">
                     <span class="flip-badge">Beliebt</span>
                     <h3>Farb- & Stilberatung</h3>
-                    <p>Finde deine Farben und deinen Stil.</p>
-                    <span class="flip-hint">Klicken für Details →</span>
+                    <p class="flip-front-tagline">Finde deine Farben und deinen Stil.</p>
+                    <ul class="flip-front-list">
+                      <li>Das optimale Gesamtpaket</li>
+                      <li>Farben + Stilkonzept kombiniert</li>
+                      <li>Auf deinen Alltag zugeschnitten</li>
+                    </ul>
+                    <span class="flip-hint">Klicken für Info →</span>
                   </div>
                 </div>
-                <div class="flip-back" style="--back-hue: #4a3540">
+                <div class="flip-back">
+                  <h3 class="flip-back-title">Farb- & Stilberatung</h3>
                   <p class="flip-back-desc">Das optimale Gesamtpaket. Hier verbinden wir deine idealen Farben mit einem Stilkonzept, das zu deiner Figur, deinem Alltag und deiner Ausstrahlung passt.</p>
                   <div class="flip-back-meta">
                     <span class="flip-back-price">Auf Anfrage</span>
                     <span class="flip-back-duration">3–4 Std.</span>
                   </div>
-                  <a href="#contact" class="btn btn-pill btn--accent">Anfragen</a>
+                  <button type="button" class="btn btn-pill btn--accent flip-anfrage" data-package="Farb- & Stilberatung">Anfragen</button>
                 </div>
               </div>
             </div>
 
             <!-- Herren-Spezial -->
-            <div class="flip-card">
+            <div class="flip-card" data-package="Herren-Spezial">
               <div class="flip-inner">
-                <div class="flip-front" style="--card-bg: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80')">
-                  <div class="flip-front-overlay">
+                <div class="flip-front">
+                  <div class="flip-front-content">
                     <h3>Herren-Spezial</h3>
-                    <p>Die Farb- & Stilberatung für Männer.</p>
-                    <span class="flip-hint">Klicken für Details →</span>
+                    <p class="flip-front-tagline">Die Farb- & Stilberatung für Männer.</p>
+                    <ul class="flip-front-list">
+                      <li>Business, Casual & Freizeit</li>
+                      <li>Farbempfehlungen & Passformen</li>
+                      <li>Kombinationsmöglichkeiten</li>
+                    </ul>
+                    <span class="flip-hint">Klicken für Info →</span>
                   </div>
                 </div>
-                <div class="flip-back" style="--back-hue: #3a2e35">
+                <div class="flip-back">
+                  <h3 class="flip-back-title">Herren-Spezial</h3>
                   <p class="flip-back-desc">Ob Business, smart casual oder Freizeit: Du erhältst Empfehlungen zu Farben, Passformen und Kombinationsmöglichkeiten – abgestimmt auf deinen Alltag.</p>
                   <div class="flip-back-meta">
                     <span class="flip-back-price">350€</span>
                     <span class="flip-back-duration">2–3 Std. · inkl. Farbpass</span>
                   </div>
-                  <a href="#contact" class="btn btn-pill btn--accent">Jetzt buchen</a>
+                  <button type="button" class="btn btn-pill btn--accent flip-anfrage" data-package="Herren-Spezial">Anfragen</button>
                 </div>
               </div>
             </div>
 
             <!-- Kleiderschrank-Check -->
-            <div class="flip-card">
+            <div class="flip-card" data-package="Kleiderschrank-Check">
               <div class="flip-inner">
-                <div class="flip-front" style="--card-bg: linear-gradient(135deg, #c0665a 0%, var(--plum) 100%)">
-                  <div class="flip-front-overlay">
-                    <span class="flip-badge">Add-on</span>
+                <div class="flip-front">
+                  <div class="flip-front-content">
+                    <span class="flip-badge flip-badge--soft">Add-on</span>
                     <h3>Kleiderschrank-Check</h3>
-                    <p>Dein Schrank: neu gedacht.</p>
-                    <span class="flip-hint">Klicken für Details →</span>
+                    <p class="flip-front-tagline">Dein Schrank: neu gedacht.</p>
+                    <ul class="flip-front-list">
+                      <li>Gemeinsam ausmisten & ordnen</li>
+                      <li>Kleidungslücken erkennen</li>
+                      <li>Neue Kombinationen entdecken</li>
+                    </ul>
+                    <span class="flip-hint">Klicken für Info →</span>
                   </div>
                 </div>
-                <div class="flip-back" style="--back-hue: var(--plum)">
+                <div class="flip-back">
+                  <h3 class="flip-back-title">Kleiderschrank-Check</h3>
                   <p class="flip-back-desc">Wir sortieren gemeinsam aus, erkennen Lücken und entdecken neue Kombinationen aus vorhandenen Teilen. So entsteht wieder Ordnung im Schrank und Klarheit beim täglichen Anziehen.</p>
                   <div class="flip-back-meta">
                     <span class="flip-back-price">Auf Anfrage</span>
                   </div>
-                  <a href="#contact" class="btn btn-pill btn--accent">Anfragen</a>
+                  <button type="button" class="btn btn-pill btn--accent flip-anfrage" data-package="Kleiderschrank-Check">Anfragen</button>
                 </div>
               </div>
             </div>
 
             <!-- Personal Shopping -->
-            <div class="flip-card">
+            <div class="flip-card" data-package="Personal Shopping">
               <div class="flip-inner">
-                <div class="flip-front" style="--card-bg: linear-gradient(135deg, #7a6168 0%, var(--plum-2) 100%)">
-                  <div class="flip-front-overlay">
-                    <span class="flip-badge">Add-on</span>
+                <div class="flip-front">
+                  <div class="flip-front-content">
+                    <span class="flip-badge flip-badge--soft">Add-on</span>
                     <h3>Personal Shopping</h3>
-                    <p>Wir finden gemeinsam neue Lieblingsstücke.</p>
-                    <span class="flip-hint">Klicken für Details →</span>
+                    <p class="flip-front-tagline">Wir finden gemeinsam neue Lieblingsstücke.</p>
+                    <ul class="flip-front-list">
+                      <li>Gezielte Einkaufsbegleitung</li>
+                      <li>Passende Kleidungsstücke finden</li>
+                      <li>Ideal nach dem Kleiderschrank-Check</li>
+                    </ul>
+                    <span class="flip-hint">Klicken für Info →</span>
                   </div>
                 </div>
-                <div class="flip-back" style="--back-hue: var(--plum-2)">
+                <div class="flip-back">
+                  <h3 class="flip-back-title">Personal Shopping</h3>
                   <p class="flip-back-desc">Nachdem wir deine Farben und deinen Stil herausgearbeitet haben, gehen wir gemeinsam auf die Suche nach passenden Kleidungsstücken. Die perfekte Ergänzung zum Kleiderschrank-Check.</p>
                   <div class="flip-back-meta">
                     <span class="flip-back-price">Auf Anfrage</span>
                   </div>
-                  <a href="#contact" class="btn btn-pill btn--accent">Anfragen</a>
+                  <button type="button" class="btn btn-pill btn--accent flip-anfrage" data-package="Personal Shopping">Anfragen</button>
                 </div>
               </div>
             </div>
 
             <!-- Sonderformate -->
-            <div class="flip-card">
+            <div class="flip-card" data-package="Sonderformate">
               <div class="flip-inner">
-                <div class="flip-front" style="--card-bg: linear-gradient(135deg, #4a3540 0%, #2a1f24 100%)">
-                  <div class="flip-front-overlay">
-                    <span class="flip-badge">Spezial</span>
+                <div class="flip-front">
+                  <div class="flip-front-content">
+                    <span class="flip-badge flip-badge--soft">Spezial</span>
                     <h3>Sonderformate</h3>
-                    <p>Gruppenformate für jeden Anlass.</p>
-                    <span class="flip-hint">Klicken für Details →</span>
+                    <p class="flip-front-tagline">Gruppen- & Eventformate auf Maß.</p>
+                    <ul class="flip-front-list">
+                      <li>JGA & Mädelsabend</li>
+                      <li>Mutter-Tochter-Tag</li>
+                      <li>Firmenfeier & Team-Events</li>
+                    </ul>
+                    <span class="flip-hint">Klicken für Info →</span>
                   </div>
                 </div>
-                <div class="flip-back" style="--back-hue: #4a3540">
+                <div class="flip-back">
+                  <h3 class="flip-back-title">Sonderformate</h3>
                   <p class="flip-back-desc">Ob JGA, Mädelsabend, Mutter-Tochter-Tag oder Firmenfeier: Auf Wunsch gestalte ich auch Gruppen- und Sonderformate. Dein Anlass ist besonders? Dann passt das Format sich an – nicht umgekehrt.</p>
                   <div class="flip-back-meta">
                     <span class="flip-back-price">Auf Anfrage</span>
                   </div>
-                  <a href="#contact" class="btn btn-pill btn--accent">Anfragen</a>
+                  <button type="button" class="btn btn-pill btn--accent flip-anfrage" data-package="Sonderformate">Anfragen</button>
                 </div>
               </div>
             </div>
 
             <!-- Facettenreich Deluxe -->
-            <div class="flip-card">
+            <div class="flip-card" data-package="Facettenreich Deluxe">
               <div class="flip-inner">
-                <div class="flip-front" style="--card-bg: linear-gradient(135deg, var(--accent) 0%, var(--plum) 100%)">
-                  <div class="flip-front-overlay">
+                <div class="flip-front flip-front--premium">
+                  <div class="flip-front-content">
                     <span class="flip-badge">Premium</span>
                     <h3>Facettenreich Deluxe</h3>
-                    <p>Das große Verwandlungspaket.</p>
-                    <span class="flip-hint">Klicken für Details →</span>
+                    <p class="flip-front-tagline">Das große Verwandlungspaket.</p>
+                    <ul class="flip-front-list">
+                      <li>Farb- & Stilanalyse</li>
+                      <li>Kleiderschrank-Check</li>
+                      <li>Persönliche Einkaufsbegleitung</li>
+                    </ul>
+                    <span class="flip-hint">Klicken für Info →</span>
                   </div>
                 </div>
-                <div class="flip-back" style="--back-hue: var(--plum)">
+                <div class="flip-back">
+                  <h3 class="flip-back-title">Facettenreich Deluxe</h3>
                   <p class="flip-back-desc">Dein Komplettprogramm für einen neuen Auftritt. Farb- & Stilanalyse, Kleiderschrank-Check und persönliche Einkaufsbegleitung – verteilt auf 3 Termine, damit alles in Ruhe wirken kann.</p>
                   <div class="flip-back-meta">
                     <span class="flip-back-price">790€</span>
                     <span class="flip-back-duration">3 Termine · ca. 8–10 Std. · inkl. Farbpass, Stilguide & Einkaufsbegleitung</span>
                   </div>
-                  <a href="#contact" class="btn btn-pill btn--accent">Jetzt anfragen</a>
+                  <button type="button" class="btn btn-pill btn--accent flip-anfrage" data-package="Facettenreich Deluxe">Anfragen</button>
                 </div>
               </div>
             </div>
@@ -346,7 +400,6 @@
               </div>
             </article>
             <article class="review-card review-card--featured reveal reveal--delay">
-              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" class="review-bg" alt="" loading="lazy" />
               <div class="review-content">
                 <p class="stars">★★★★★</p>
                 <blockquote>„Mega Beratung! Ich weiß endlich, welche Farben mich frisch aussehen lassen."</blockquote>
@@ -370,154 +423,6 @@
                 </div>
               </div>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- PRICING -->
-      <section class="section pricing" id="pricing">
-        <div class="pricing-bg" aria-hidden="true"></div>
-        <div class="wrap">
-          <div class="section-head reveal">
-            <span class="tag tag--muted">Pakete</span>
-            <h2>Wähle deinen<br>Weg zur Stilklarheit.</h2>
-          </div>
-          <div class="pricing-grid pricing-grid--4">
-
-            <!-- Farbberatung -->
-            <article class="price-card reveal">
-              <div class="price-header">
-                <h3>Farbberatung</h3>
-                <p class="price-duration">90–120 Min.</p>
-                <p class="price">250€</p>
-                <p class="price-note">inkl. Farbpass</p>
-              </div>
-              <p class="price-tagline">Lerne, welche Farben dich strahlen lassen.</p>
-              <ul>
-                <li>Professionelle Farbtyp-Analyse</li>
-                <li>Klares Farbsystem für den Alltag</li>
-                <li>Farbpass inklusive</li>
-              </ul>
-              <a href="#contact" class="btn btn-pill btn--outline">Jetzt buchen</a>
-            </article>
-
-            <!-- Stilberatung -->
-            <article class="price-card reveal">
-              <div class="price-header">
-                <h3>Stilberatung</h3>
-                <p class="price-duration">90–120 Min.</p>
-                <p class="price">230€</p>
-                <p class="price-note">inkl. persönlicher Stilguide</p>
-              </div>
-              <p class="price-tagline">Lerne deinen perfekten Stil kennen.</p>
-              <ul>
-                <li>Figur- & Proportionsanalyse</li>
-                <li>Materialkunde & Stilrichtung</li>
-                <li>Klare Stilidentität</li>
-              </ul>
-              <a href="#contact" class="btn btn-pill btn--outline">Jetzt buchen</a>
-            </article>
-
-            <!-- Farb- und Stilberatung -->
-            <article class="price-card reveal">
-              <div class="price-popular">Beliebt</div>
-              <div class="price-header">
-                <h3>Farb- & Stilberatung</h3>
-                <p class="price-duration">3–4 Std.</p>
-                <p class="price price--text">Auf Anfrage</p>
-              </div>
-              <p class="price-tagline">Finde deine Farben und deinen Stil.</p>
-              <ul>
-                <li>Das optimale Gesamtpaket</li>
-                <li>Farben + Stilkonzept kombiniert</li>
-                <li>Auf deinen Alltag zugeschnitten</li>
-              </ul>
-              <a href="#contact" class="btn btn-pill btn--outline">Anfragen</a>
-            </article>
-
-            <!-- Herren-Spezial -->
-            <article class="price-card reveal">
-              <div class="price-header">
-                <h3>Herren-Spezial</h3>
-                <p class="price-duration">2–3 Std.</p>
-                <p class="price">350€</p>
-                <p class="price-note">inkl. Farbpass</p>
-              </div>
-              <p class="price-tagline">Die Farb- & Stilberatung für Männer.</p>
-              <ul>
-                <li>Business, Casual & Freizeit</li>
-                <li>Farbempfehlungen & Passformen</li>
-                <li>Kombinationsmöglichkeiten</li>
-              </ul>
-              <a href="#contact" class="btn btn-pill btn--outline">Jetzt buchen</a>
-            </article>
-
-            <!-- Kleiderschrank-Check -->
-            <article class="price-card reveal">
-              <div class="price-addon-badge">Add-on</div>
-              <div class="price-header">
-                <h3>Kleiderschrank-Check</h3>
-                <p class="price price--text">Auf Anfrage</p>
-              </div>
-              <p class="price-tagline">Dein Schrank: neu gedacht.</p>
-              <ul>
-                <li>Gemeinsam ausmisten & ordnen</li>
-                <li>Kleidungslücken erkennen</li>
-                <li>Neue Kombinationen entdecken</li>
-              </ul>
-              <a href="#contact" class="btn btn-pill btn--outline">Anfragen</a>
-            </article>
-
-            <!-- Personal Shopping -->
-            <article class="price-card reveal">
-              <div class="price-addon-badge">Add-on</div>
-              <div class="price-header">
-                <h3>Personal Shopping</h3>
-                <p class="price price--text">Auf Anfrage</p>
-              </div>
-              <p class="price-tagline">Wir finden gemeinsam neue Lieblingsstücke.</p>
-              <ul>
-                <li>Gezielte Einkaufsbegleitung</li>
-                <li>Passende Kleidungsstücke finden</li>
-                <li>Ideal nach dem Kleiderschrank-Check</li>
-              </ul>
-              <a href="#contact" class="btn btn-pill btn--outline">Anfragen</a>
-            </article>
-
-            <!-- Sonderformate -->
-            <article class="price-card reveal">
-              <div class="price-addon-badge">Spezial</div>
-              <div class="price-header">
-                <h3>Sonderformate</h3>
-                <p class="price price--text">Auf Anfrage</p>
-              </div>
-              <p class="price-tagline">Gruppen- & Eventformate auf Maß.</p>
-              <ul>
-                <li>JGA & Mädelsabend</li>
-                <li>Mutter-Tochter-Tag</li>
-                <li>Firmenfeier & Team-Events</li>
-              </ul>
-              <a href="#contact" class="btn btn-pill btn--outline">Anfragen</a>
-            </article>
-
-            <!-- Facettenreich Deluxe -->
-            <article class="price-card price-card--featured reveal">
-              <div class="price-popular">Premium</div>
-              <div class="price-header">
-                <h3>Facettenreich Deluxe</h3>
-                <p class="price-duration">3 Termine · ca. 8–10 Std.</p>
-                <p class="price">790€</p>
-                <p class="price-note">inkl. Farbpass, Stilguide & Einkaufsbegleitung</p>
-              </div>
-              <p class="price-tagline">Das große Verwandlungspaket.</p>
-              <ul>
-                <li>Farb- & Stilanalyse</li>
-                <li>Kleiderschrank-Check</li>
-                <li>Persönliche Einkaufsbegleitung</li>
-              </ul>
-              <a href="#contact" class="btn btn-pill btn--dark">Jetzt anfragen</a>
-            </article>
-
           </div>
         </div>
       </section>
@@ -563,12 +468,51 @@
           <p>Buche dein unverbindliches Erstgespräch und starte mit mehr Stilklarheit.</p>
           <div class="cta-actions">
             <button type="button" class="btn btn-pill btn--dark" id="open-contact-modal" data-mobile-label="Schreibe mir einfach bei WhatsApp">Erstgespräch sichern</button>
-            <a href="#pricing" class="btn btn-pill btn--ghost-light">Gutschein kaufen</a>
+            <a href="#services" class="btn btn-pill btn--ghost-light">Gutschein kaufen</a>
           </div>
         </div>
       </section>
 
     </main>
+
+    <!-- ANFRAGE MODAL (Auswahl Kontaktart) -->
+    <div class="modal" id="anfrage-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-anfrage></div>
+      <section class="modal-card modal-card--anfrage" role="dialog" aria-modal="true" aria-labelledby="anfrage-modal-title">
+        <button type="button" class="modal-close" aria-label="Schließen" data-close-anfrage>×</button>
+        <h3 id="anfrage-modal-title">Anfrage für<br><em id="anfrage-paket-name">Paket</em></h3>
+        <p>Wie möchtest du Kontakt aufnehmen?</p>
+        <div class="anfrage-options">
+          <button type="button" class="anfrage-option" data-anfrage-method="mail">
+            <span class="anfrage-option-icon" aria-hidden="true">✉</span>
+            <span class="anfrage-option-text">
+              <strong>Per E-Mail</strong>
+              <span>Über das Kontaktformular</span>
+            </span>
+          </button>
+          <button type="button" class="anfrage-option" data-anfrage-method="phone">
+            <span class="anfrage-option-icon" aria-hidden="true">☎</span>
+            <span class="anfrage-option-text">
+              <strong>Per Telefon</strong>
+              <span id="anfrage-phone-label">Nummer anzeigen</span>
+            </span>
+          </button>
+          <button type="button" class="anfrage-option" data-anfrage-method="whatsapp">
+            <span class="anfrage-option-icon anfrage-option-icon--whatsapp" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.683-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </span>
+            <span class="anfrage-option-text">
+              <strong>Per WhatsApp</strong>
+              <span>Direkt eine Nachricht senden</span>
+            </span>
+          </button>
+        </div>
+        <div class="anfrage-phone" id="anfrage-phone" hidden>
+          <p class="anfrage-phone-label">Du erreichst mich unter:</p>
+          <a href="tel:+4915678308103" class="anfrage-phone-number">+49 156 78308103</a>
+        </div>
+      </section>
+    </div>
 
     <!-- CONTACT MODAL -->
     <div class="modal" id="contact-modal" aria-hidden="true">
@@ -614,9 +558,9 @@
         <div class="footer-col">
           <h4>Navigation</h4>
           <a href="#about">Über mich</a>
-          <a href="#services">Services</a>
-          <a href="#reviews">Bewertungen</a>
-          <a href="#pricing">Pakete</a>
+          <a href="#features">Ablauf</a>
+          <a href="#services">Pakete</a>
+          <a href="#reviews">Kundenstimmen</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="footer-col">
