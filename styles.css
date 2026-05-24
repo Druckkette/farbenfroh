@@ -136,7 +136,8 @@ h3 { font-size: 1.35rem; font-weight: 500; }
 
 em {
   font-style: italic;
-  color: var(--bordeaux-light);
+  color: var(--bordeaux);
+  font-weight: 400;
 }
 
 p { margin: 0; }
@@ -146,20 +147,20 @@ p { margin: 0; }
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: var(--bordeaux-pale);
-  color: var(--bordeaux);
+  background: var(--bordeaux);
+  color: var(--cream);
   border-radius: 999px;
   padding: 0.3rem 0.85rem;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  width: fit-content;
 }
 
 .tag--muted {
-  background: transparent;
-  border: 1px solid rgba(122,31,46,0.20);
-  color: var(--text-muted);
+  background: var(--bordeaux);
+  color: var(--cream);
 }
 
 /* ── Buttons ────────────────────────────── */
@@ -600,7 +601,7 @@ p { margin: 0; }
 }
 
 /* ── ABLAUF (vorher: FEATURES) ────────────── */
-.features { background: var(--bordeaux-pale); }
+.features { background: var(--cream); }
 
 .section-head {
   text-align: center;
@@ -742,7 +743,7 @@ p { margin: 0; }
 
 /* FRONT – Hell, mit Inhalt */
 .flip-front {
-  background: var(--bordeaux-pale);
+  background: var(--cream);
   color: var(--text-dark);
   border: 1.5px solid rgba(122,31,46,0.18);
   box-shadow: 0 6px 24px rgba(42,42,42,0.06);
@@ -755,12 +756,12 @@ p { margin: 0; }
 }
 
 .flip-front--featured {
-  background: linear-gradient(155deg, var(--bordeaux-pale) 0%, var(--cream) 65%);
+  background: var(--cream);
   border-color: rgba(122,31,46,0.32);
 }
 
 .flip-front--premium {
-  background: linear-gradient(155deg, var(--bordeaux-pale) 0%, var(--cream) 70%);
+  background: var(--cream);
   border-color: rgba(122,31,46,0.40);
 }
 
@@ -906,27 +907,27 @@ p { margin: 0; }
   box-shadow: 0 10px 24px rgba(122,31,46,0.40);
 }
 
-/* Ghost button für dunklen Hintergrund (CTA-Sektion) */
+/* Ghost button für hellen Hintergrund (CTA-Sektion) */
 .btn--ghost-light {
   background: transparent;
-  color: rgba(245,240,235,0.85);
-  border: 1.5px solid rgba(245,240,235,0.4);
+  color: var(--bordeaux);
+  border: 1.5px solid var(--bordeaux);
 }
 
 .btn--ghost-light:hover {
-  background: rgba(245,240,235,0.12);
+  background: var(--bordeaux);
   color: var(--cream);
-  border-color: rgba(245,240,235,0.7);
-  box-shadow: none;
+  border-color: var(--bordeaux);
+  box-shadow: 0 8px 24px rgba(122,31,46,0.25);
 }
 
 
 /* ── REVIEWS ─────────────────────────────── */
-.reviews { background: var(--bordeaux-pale); }
+.reviews { background: var(--cream); }
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1.25rem;
   align-items: stretch;
 }
@@ -1013,7 +1014,7 @@ blockquote {
 }
 
 /* ── FAQ ─────────────────────────────────── */
-.faq { background: var(--cream); }
+.faq { background: var(--white); }
 
 .faq-inner {
   display: grid;
@@ -1029,7 +1030,7 @@ blockquote {
 }
 
 details {
-  background: var(--white);
+  background: var(--cream);
   border-radius: var(--radius);
   border: 1.5px solid transparent;
   transition: border-color 200ms ease, box-shadow 200ms ease;
@@ -1087,22 +1088,14 @@ details p {
 
 /* ── CTA ─────────────────────────────────── */
 .cta-section {
-  background: var(--bordeaux);
+  background: var(--white);
   padding: clamp(5rem, 10vw, 9rem) 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.cta-blob {
-  position: absolute;
-  width: 700px; height: 700px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(196,128,142,0.25), transparent 65%);
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
+.cta-blob { display: none; }
 
 .cta-inner {
   position: relative;
@@ -1113,9 +1106,9 @@ details p {
   gap: 1.5rem;
 }
 
-.cta-inner .tag { background: rgba(245,240,235,0.1); color: rgba(245,240,235,0.6); }
-.cta-inner h2   { color: var(--cream); }
-.cta-inner > p  { color: rgba(245,240,235,0.55); font-size: 1rem; max-width: 44ch; line-height: 1.7; }
+.cta-inner .tag { background: var(--bordeaux); color: var(--cream); }
+.cta-inner h2   { color: var(--text-dark); }
+.cta-inner > p  { color: var(--text-muted); font-size: 1rem; max-width: 44ch; line-height: 1.7; }
 
 .cta-actions {
   display: flex;
@@ -1254,7 +1247,8 @@ details p {
 
 .modal-card--anfrage h3 em {
   font-style: italic;
-  color: var(--bordeaux-light);
+  color: var(--bordeaux);
+  font-weight: 400;
 }
 
 .anfrage-options {
