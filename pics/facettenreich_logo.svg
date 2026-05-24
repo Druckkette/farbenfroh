@@ -1,37 +1,52 @@
-<svg width="440" height="262" viewBox="120 50 440 262" xmlns="http://www.w3.org/2000/svg">
-  <title>Facettenreich – Farb- und Stilberatung</title>
-  <polygon points="340,58 315,92 365,92" fill="#f2c4b8" opacity="0.95"/>
-  <polygon points="315,92 285,78 300,110" fill="#e8a090" opacity="0.9"/>
-  <polygon points="365,92 395,78 380,110" fill="#d4806e" opacity="0.88"/>
-  <polygon points="285,78 265,98 300,110" fill="#f0d0c4" opacity="0.85"/>
-  <polygon points="395,78 415,98 380,110" fill="#c96e5a" opacity="0.82"/>
-  <polygon points="265,98 300,110 290,145" fill="#e8b0a0" opacity="0.9"/>
-  <polygon points="300,110 315,92 320,138" fill="#f5cfc4" opacity="0.92"/>
-  <polygon points="315,92 340,58 340,125" fill="#fce8e2" opacity="0.88"/>
-  <polygon points="340,58 365,92 340,125" fill="#f2c4b8" opacity="0.85"/>
-  <polygon points="365,92 380,110 360,138" fill="#e09080" opacity="0.9"/>
-  <polygon points="380,110 415,98 390,145" fill="#d07868" opacity="0.88"/>
-  <polygon points="265,98 290,145 305,170" fill="#c8806e" opacity="0.85"/>
-  <polygon points="290,145 320,138 315,178" fill="#e0a090" opacity="0.9"/>
-  <polygon points="320,138 340,125 340,185" fill="#f0c8bc" opacity="0.88"/>
-  <polygon points="340,125 360,138 340,185" fill="#e8b0a0" opacity="0.86"/>
-  <polygon points="360,138 390,145 365,170" fill="#c87060" opacity="0.85"/>
-  <polygon points="390,145 415,98 375,170" fill="#b86050" opacity="0.82"/>
-  <polygon points="305,170 315,178 340,210" fill="#c06858" opacity="0.88"/>
-  <polygon points="315,178 340,185 340,210" fill="#d88070" opacity="0.9"/>
-  <polygon points="340,185 365,170 340,210" fill="#c87868" opacity="0.87"/>
-  <polygon points="365,170 375,170 340,210" fill="#b86858" opacity="0.84"/>
-  <polyline points="340,58 285,78 265,98 290,145 305,170 340,210 375,170 390,145 415,98 395,78 340,58" fill="none" stroke="#c8786a" stroke-width="0.4" opacity="0.6"/>
-  <line x1="265" y1="98" x2="415" y2="98" stroke="#c8786a" stroke-width="0.3" opacity="0.4"/>
-  <text text-anchor="middle" x="340" y="262"
-        font-family="'Cormorant Garamond', 'Garamond', 'Georgia', serif"
-        font-size="52" font-weight="300" letter-spacing="6">
-    <tspan fill="#4a3228">Facetten</tspan><tspan fill="#c97a6e" font-style="italic">reich</tspan>
+<svg width="100%" viewBox="120 50 440 250" role="img" xmlns="http://www.w3.org/2000/svg" style=""><defs><mask id="imagine-text-gaps-qs5wyv" maskUnits="userSpaceOnUse"><rect x="120" y="50" width="440" height="250" fill="white"/><rect x="171.6328125" y="175" width="336.734375" height="63" fill="black" rx="2"/><rect x="208.953125" y="250" width="262.09375" height="17" fill="black" rx="2"/></mask></defs>
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Facettenreich Logo Final</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Facettenreich Logo mit symmetrischem Bordeaux-Diamant und Schriftzug</desc>
+
+  <!-- Diamant – symmetrisch, Bordeaux-Palette -->
+  <!-- Crown -->
+  <polygon points="340,58 320,84 360,84" fill="#f2d0d6" style="fill:rgb(242, 208, 214);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="320,84 296,73 307,98" fill="#e0a0ae" style="fill:rgb(224, 160, 174);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="360,84 384,73 373,98" fill="#c4808e" style="fill:rgb(196, 128, 142);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="296,73 280,88 307,98" fill="#f5e0e4" style="fill:rgb(245, 224, 228);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="384,73 400,88 373,98" fill="#a85a6a" style="fill:rgb(168, 90, 106);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Girdle -->
+  <polygon points="280,88 307,98 300,123" fill="#e8b0bc" style="fill:rgb(232, 176, 188);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="307,98 320,84 324,118" fill="#f5dce0" style="fill:rgb(245, 220, 224);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="320,84 340,58 340,108" fill="#faf0f2" style="fill:rgb(250, 240, 242);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="340,58 360,84 340,108" fill="#f2d0d6" style="fill:rgb(242, 208, 214);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="360,84 373,98 356,118" fill="#d890a0" style="fill:rgb(216, 144, 160);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="373,98 400,88 380,123" fill="#c07080" style="fill:rgb(192, 112, 128);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Pavilion -->
+  <polygon points="280,88 300,123 310,142" fill="#a85a6a" style="fill:rgb(168, 90, 106);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="400,88 380,123 370,142" fill="#a85a6a" style="fill:rgb(168, 90, 106);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="300,123 324,118 320,152" fill="#d890a0" style="fill:rgb(216, 144, 160);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="380,123 356,118 360,152" fill="#d890a0" style="fill:rgb(216, 144, 160);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="324,118 340,108 340,158" fill="#ecc0ca" style="fill:rgb(236, 192, 202);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="356,118 340,108 340,158" fill="#ecc0ca" style="fill:rgb(236, 192, 202);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Culet -->
+  <polygon points="310,142 320,152 340,175" fill="#7a1f2e" style="fill:rgb(122, 31, 46);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="370,142 360,152 340,175" fill="#7a1f2e" style="fill:rgb(122, 31, 46);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="320,152 340,158 340,175" fill="#924060" style="fill:rgb(146, 64, 96);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="360,152 340,158 340,175" fill="#924060" style="fill:rgb(146, 64, 96);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Outline -->
+  <polyline points="340,58 296,73 280,88 300,123 310,142 340,175 370,142 380,123 400,88 384,73 340,58" fill="none" stroke="#7a1f2e" stroke-width="0.5" opacity="0.5" mask="url(#imagine-text-gaps-qs5wyv)" style="fill:none;stroke:rgb(122, 31, 46);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <line x1="280" y1="88" x2="400" y2="88" stroke="#7a1f2e" stroke-width="0.3" opacity="0.4" style="fill:rgb(0, 0, 0);stroke:rgb(122, 31, 46);color:rgb(0, 0, 0);stroke-width:0.3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Schrift -->
+  <text text-anchor="middle" x="340" y="222" font-family="'Cormorant Garamond', 'Garamond', 'Georgia', serif" font-size="52" font-weight="300" letter-spacing="6" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Cormorant Garamond&quot;, Garamond, Georgia, serif;font-size:52px;font-weight:300;text-anchor:middle;dominant-baseline:auto">
+    <tspan fill="#7a1f2e" style="fill:rgb(122, 31, 46);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Cormorant Garamond&quot;, Garamond, Georgia, serif;font-size:52px;font-weight:300;text-anchor:middle;dominant-baseline:auto">Facetten</tspan><tspan fill="#7a1f2e" font-style="italic" style="fill:rgb(122, 31, 46);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Cormorant Garamond&quot;, Garamond, Georgia, serif;font-size:52px;font-weight:300;font-style:italic;text-anchor:middle;dominant-baseline:auto">reich</tspan>
   </text>
-  <line x1="175" y1="278" x2="505" y2="278" stroke="#d4a89a" stroke-width="0.5"/>
-  <polygon points="164,278 170,274 176,278 170,282" fill="#d4806e" opacity="0.7"/>
-  <polygon points="504,278 510,274 516,278 510,282" fill="#d4806e" opacity="0.7"/>
-  <text x="340" y="302" text-anchor="middle"
-        font-family="'Raleway', 'Gill Sans', 'Trebuchet MS', sans-serif"
-        font-size="11" font-weight="300" letter-spacing="5" fill="#9a7065">FARB- UND STILBERATUNG</text>
+
+  <!-- Divider -->
+  <line x1="175" y1="238" x2="505" y2="238" stroke="#7a1f2e" stroke-width="0.5" opacity="0.5" mask="url(#imagine-text-gaps-qs5wyv)" style="fill:rgb(0, 0, 0);stroke:rgb(122, 31, 46);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="164,238 170,234 176,238 170,242" fill="#7a1f2e" opacity="0.6" style="fill:rgb(122, 31, 46);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <polygon points="504,238 510,234 516,238 510,242" fill="#7a1f2e" opacity="0.6" style="fill:rgb(122, 31, 46);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Tagline -->
+  <text x="340" y="262" text-anchor="middle" font-family="'Raleway', 'Gill Sans', 'Trebuchet MS', sans-serif" font-size="11" font-weight="300" letter-spacing="5" fill="#c4808e" style="fill:rgb(196, 128, 142);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Raleway, &quot;Gill Sans&quot;, &quot;Trebuchet MS&quot;, sans-serif;font-size:11px;font-weight:300;text-anchor:middle;dominant-baseline:auto">FARB- UND STILBERATUNG</text>
+
 </svg>
