@@ -131,8 +131,6 @@ const contactSuccess = document.getElementById('contact-success');
 const whatsappNumber = '4915678308103';
 const phoneNumberDisplay = '+49 156 78308103';
 const defaultWhatsappText = 'Hallo, ich möchte einen Termin vereinbaren.';
-const whatsappText = encodeURIComponent(defaultWhatsappText);
-const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 const mobileBreakpoint = window.matchMedia('(max-width: 680px)');
 const contactNavLink = document.getElementById('contact-nav-link');
 
@@ -147,18 +145,10 @@ const syncMobileWhatsAppCTA = () => {
 
   if (!openContactModalBtn) return;
 
-  if (isMobile) {
-    openContactModalBtn.textContent = openContactModalBtn.dataset.mobileLabel || 'Schreibe mir einfach bei WhatsApp';
-    openContactModalBtn.setAttribute('aria-label', 'WhatsApp öffnen, um direkt eine Nachricht zu senden');
-    openContactModalBtn.onclick = () => {
-      window.open(whatsappUrl, '_blank', 'noopener');
-    };
-    return;
-  }
-
   openContactModalBtn.textContent = 'Erstgespräch sichern';
   openContactModalBtn.removeAttribute('aria-label');
   openContactModalBtn.onclick = null;
+
 };
 
 
@@ -176,11 +166,6 @@ const closeContactModal = () => {
   contactModal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 };
-
-openContactModalBtn?.addEventListener('click', () => {
-  if (mobileBreakpoint.matches) return;
-  openContactModal();
-});
 
 syncMobileWhatsAppCTA();
 mobileBreakpoint.addEventListener('change', syncMobileWhatsAppCTA);
