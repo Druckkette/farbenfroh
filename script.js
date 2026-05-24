@@ -132,16 +132,10 @@ const whatsappNumber = '4915678308103';
 const phoneNumberDisplay = '+49 156 78308103';
 const defaultWhatsappText = 'Hallo, ich möchte einen Termin vereinbaren.';
 const mobileBreakpoint = window.matchMedia('(max-width: 680px)');
-const contactNavLink = document.getElementById('contact-nav-link');
 
 const syncMobileWhatsAppCTA = () => {
   const isMobile = mobileBreakpoint.matches;
 
-  if (contactNavLink) {
-    contactNavLink.textContent = isMobile
-      ? 'Schreibe mir einfach bei WhatsApp'
-      : 'Termin vereinbaren';
-  }
 
   if (!openContactModalBtn) return;
 
