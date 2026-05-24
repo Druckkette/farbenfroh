@@ -244,6 +244,7 @@ const buildPackageWhatsappUrl = (paket) => {
 
 document.querySelectorAll('.flip-anfrage').forEach(btn => {
   btn.addEventListener('click', (e) => {
+    e.preventDefault();
     e.stopPropagation();
     const paket = btn.dataset.package || '';
     openAnfrageModal(paket);
