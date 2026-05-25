@@ -71,6 +71,10 @@ h2 {
   margin-top: 1rem;
 }
 
+.card > h2:first-child {
+  margin-top: 0;
+}
+
 a {
   color: var(--accent);
 }
