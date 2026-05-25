@@ -121,11 +121,15 @@ document.querySelectorAll('.flip-card').forEach(card => {
 });
 
 // ── Kontakt-Modal ──────────────────────────
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xredarll';
+
 const contactModal = document.getElementById('contact-modal');
 const openContactModalBtn = document.getElementById('open-contact-modal');
 const closeModalEls = document.querySelectorAll('[data-close-modal]');
 const contactForm = document.getElementById('contact-form');
 const contactSuccess = document.getElementById('contact-success');
+const contactError = document.getElementById('contact-error');
+const contactSubmit = document.getElementById('contact-submit');
 
 // ── Mobile WhatsApp CTA ───────────────────
 const whatsappNumber = '4915678308103';
@@ -171,14 +175,45 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-contactForm?.addEventListener('submit', (e) => {
+contactForm?.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!contactForm.checkValidity()) {
     contactForm.reportValidity();
     return;
   }
-  contactSuccess?.removeAttribute('hidden');
-  contactForm.reset();
+
+  contactSuccess?.setAttribute('hidden', '');
+  contactError?.setAttribute('hidden', '');
+  if (contactSubmit) {
+    contactSubmit.textContent = 'Wird gesendet…';
+    contactSubmit.disabled = true;
+  }
+
+  try {
+    const formData = new FormData(contactForm);
+    formData.set('_subject', 'Neue Anfrage – Facettenreich');
+    formData.delete('consent');
+
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: formData,
+      headers: { Accept: 'application/json' },
+    });
+
+    if (res.ok) {
+      contactSuccess?.removeAttribute('hidden');
+      contactForm.reset();
+    } else {
+      contactError?.removeAttribute('hidden');
+    }
+  } catch {
+    contactError?.removeAttribute('hidden');
+  } finally {
+    if (contactSubmit) {
+      contactSubmit.textContent = 'Absenden';
+      contactSubmit.disabled = false;
+    }
+  }
 });
 
 // ── Newsletter ─────────────────────────────

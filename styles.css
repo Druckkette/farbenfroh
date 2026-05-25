@@ -1247,6 +1247,14 @@ details p {
   color: #27643f;
   font-size: 0.86rem;
 }
+.contact-error {
+  margin-top: 0.15rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  background: rgba(180, 40, 40, 0.08);
+  color: #8b1a1a;
+  font-size: 0.86rem;
+}
 
 /* ── ANFRAGE MODAL ───────────────────────── */
 .modal-card--anfrage {
