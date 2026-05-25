@@ -121,8 +121,7 @@ document.querySelectorAll('.flip-card').forEach(card => {
 });
 
 // ── Kontakt-Modal ──────────────────────────
-// Web3Forms: kostenlosen Key unter https://web3forms.com erhalten
-const WEB3FORMS_KEY = 'DEIN_WEB3FORMS_KEY';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xredarll';
 
 const contactModal = document.getElementById('contact-modal');
 const openContactModalBtn = document.getElementById('open-contact-modal');
@@ -192,17 +191,16 @@ contactForm?.addEventListener('submit', async (e) => {
 
   try {
     const formData = new FormData(contactForm);
-    formData.set('access_key', WEB3FORMS_KEY);
-    formData.set('subject', 'Neue Anfrage – Facettenreich');
+    formData.set('_subject', 'Neue Anfrage – Facettenreich');
     formData.delete('consent');
 
-    const res = await fetch('https://api.web3forms.com/submit', {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
       method: 'POST',
       body: formData,
+      headers: { Accept: 'application/json' },
     });
-    const data = await res.json();
 
-    if (data.success) {
+    if (res.ok) {
       contactSuccess?.removeAttribute('hidden');
       contactForm.reset();
     } else {
