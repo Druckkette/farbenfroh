@@ -121,7 +121,7 @@ document.querySelectorAll('.flip-card').forEach(card => {
 });
 
 // ── Kontakt-Modal ──────────────────────────
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xredarll';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xojbkzbv';
 
 const contactModal = document.getElementById('contact-modal');
 const openContactModalBtn = document.getElementById('open-contact-modal');
