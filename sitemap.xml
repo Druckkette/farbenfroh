@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
   <url>
     <loc>https://www.facettenreich-muc.de/</loc>
     <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.facettenreich-muc.de/pics/header.png</image:loc>
+      <image:title>Facettenreich Farbberatung und Stilberatung München</image:title>
+      <image:caption>Kira Wimmers bei der Farbberatung in München</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.facettenreich-muc.de/farbberatung-muenchen.html</loc>
     <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.facettenreich-muc.de/pics/farbberatung.png</image:loc>
+      <image:title>Farbberatung München</image:title>
+      <image:caption>Farbberatung in München mit Farbtüchern und persönlichem Farbfächer</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.facettenreich-muc.de/stilberatung-muenchen.html</loc>
     <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.facettenreich-muc.de/pics/stilberatung.png</image:loc>
+      <image:title>Stilberatung München</image:title>
+      <image:caption>Stilberatung in München mit Proportionsanalyse und persönlichem Stilguide</image:caption>
+    </image:image>
   </url>
 </urlset>
