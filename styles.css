@@ -234,6 +234,22 @@ p { margin: 0; }
 
 .btn-text:hover { color: var(--bordeaux); transform: none; }
 
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  color: var(--bordeaux);
+  font-weight: 600;
+  font-size: 0.92rem;
+  border-bottom: 1.5px solid rgba(122,31,46,0.35);
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.text-link:hover {
+  color: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
 /* ── Scroll Reveal ──────────────────────── */
 .reveal {
   opacity: 0;
@@ -592,6 +608,19 @@ p { margin: 0; }
 
 .about-copy p { color: var(--text-muted); line-height: 1.75; }
 
+.about-copy a,
+.landing-copy a {
+  color: var(--bordeaux);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(122,31,46,0.25);
+}
+
+.about-copy a:hover,
+.landing-copy a:hover {
+  color: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
 .about-actions {
   display: flex;
   align-items: center;
@@ -686,6 +715,60 @@ p { margin: 0; }
   font-size: 0.95rem;
   line-height: 1.65;
   margin: 0;
+}
+
+/* ── SEO OVERVIEW ───────────────────────── */
+.seo-overview {
+  background: var(--white);
+}
+
+.seo-overview .section-head p {
+  max-width: 66ch;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.seo-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.seo-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 1.4rem;
+  align-items: center;
+  background: var(--cream);
+  border: 1.5px solid rgba(122,31,46,0.14);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 6px 24px rgba(42,42,42,0.05);
+}
+
+.seo-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.seo-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.seo-card h3 {
+  font-size: 1.45rem;
+}
+
+.seo-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
 }
 
 /* ── FLIP CARDS (Pakete) ─────────────────── */
@@ -1095,6 +1178,175 @@ details p {
   line-height: 1.7;
 }
 
+/* ── SEO LANDING PAGES ───────────────────── */
+.subpage .header {
+  background: rgba(245, 240, 235, 0.9);
+}
+
+.subpage-hero {
+  padding: clamp(8rem, 12vw, 11rem) 0 clamp(4rem, 8vw, 7rem);
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.subpage-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.subpage-hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.subpage-hero-copy h1 {
+  font-size: clamp(2.45rem, 5.5vw, 4.8rem);
+  max-width: 11ch;
+}
+
+.subpage-hero-copy p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 56ch;
+}
+
+.subpage-hero-media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/5;
+  background: var(--bordeaux-pale);
+}
+
+.subpage-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.landing-intro,
+.landing-process {
+  background: var(--white);
+}
+
+.landing-benefits {
+  background: var(--cream);
+}
+
+.landing-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.landing-split--reverse {
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+}
+
+.landing-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.landing-copy h2 {
+  max-width: 13ch;
+}
+
+.landing-copy p {
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.landing-note,
+.process-panel {
+  background: var(--cream);
+  border: 1.5px solid rgba(122,31,46,0.14);
+  border-radius: var(--radius);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  box-shadow: 0 6px 24px rgba(42,42,42,0.05);
+}
+
+.landing-note h3 {
+  margin-bottom: 0.8rem;
+}
+
+.landing-note p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.benefit-card {
+  background: var(--white);
+  border: 1.5px solid rgba(122,31,46,0.14);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: 0 6px 24px rgba(42,42,42,0.05);
+}
+
+.benefit-card h3 {
+  font-size: 1.28rem;
+}
+
+.benefit-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.compact-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.compact-steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.compact-steps span {
+  display: grid;
+  place-items: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--bordeaux);
+  border: 1.5px solid rgba(122,31,46,0.2);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.compact-steps p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.compact-steps strong {
+  color: var(--text-dark);
+}
+
 /* ── CTA ─────────────────────────────────── */
 .cta-section {
   background: var(--cream);
@@ -1366,7 +1618,7 @@ details p {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.35fr 1fr 1fr;
   gap: 2.5rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(42,42,42,0.10);
@@ -1540,6 +1792,12 @@ details p {
   .about-photo       { display: block; max-width: 220px; margin: 0 auto; }
   .about-photo .photo-deco,
   .about-photo .about-stat-card { display: none; }
+  .seo-card-grid     { grid-template-columns: 1fr; }
+  .subpage-hero-inner,
+  .landing-split,
+  .landing-split--reverse { grid-template-columns: 1fr; }
+  .subpage-hero-media { max-width: 460px; }
+  .benefit-grid      { grid-template-columns: repeat(2, 1fr); }
   .flip-grid         { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid      { grid-template-columns: 1fr; }
   .faq-inner         { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1562,6 +1820,9 @@ details p {
 
   .hero { padding-top: 80px; }
   .about-photo { max-width: 160px; }
+
+  .logo-diamant { height: 40px; }
+  .logo-schrift { height: 48px; }
 
   .nav, .header .btn-pill { display: none; }
 
@@ -1624,6 +1885,13 @@ details p {
   .nav.open a:hover::after { width: 60%; }
 
   .flip-grid     { grid-template-columns: 1fr; }
+  .seo-card      { grid-template-columns: 1fr; }
+  .seo-card img  { min-height: 0; aspect-ratio: 4/3; }
+  .subpage-hero  { padding-top: 7rem; }
+  .subpage-hero-copy h1 { max-width: 12ch; }
+  .subpage-hero-media { aspect-ratio: 4/3; }
+  .benefit-grid  { grid-template-columns: 1fr; }
+  .benefit-card  { min-height: auto; }
   .footer-inner  { grid-template-columns: 1fr; }
 
   .ablauf-list::before { left: 1.55rem; }
